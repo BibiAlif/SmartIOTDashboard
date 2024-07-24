@@ -1,0 +1,16 @@
+
+To Run The Tailwind React
+
+- npm install
+- npm run dev
+
+icons used https://reactnativeelements.com/docs/1.2.0/icon
+Component https://www.material-tailwind.com
+
+JSON Dummy For Vite -----------------------------------------------------------------------------------
+- $ npm install axios
+- npm install json-server
+- json-server --watch db.json --port 3030
+- If error used this cmd "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass"
+- if still error try to update node.js(Redownload)
+JSON Dummy For Vite -----------------------------------------------------------------------------------
