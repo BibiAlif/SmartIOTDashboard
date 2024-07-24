@@ -35,5 +35,15 @@ export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/govweatherTutong
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/govweatherTemburong";
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/govweatherBruneiMuara";
 
-export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/govSmartParkingRipas";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingRipas";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingAirportMall";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingJayaSetia";
+
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingRipasCCTV";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingAirportMallCCTV";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingJayaSetiaCCTV";
+
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingRipasBook";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingAirportMallBook";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingJayaSetiaBook";
 //For MTIC ---------------------------------------------------------------------------------

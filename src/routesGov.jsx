@@ -17,6 +17,14 @@ import {
   GovWeatherBruneiMuara,
   GovWeatherTemburong,
   GovSmartParkingRipas,
+  GovSmartParkingAirportMall,
+  GovSmartParkingJayaSetia,
+  GovSmartParkingRipasCCTV,
+  GovSmartParkingAirportMallCCTV,
+  GovSmartParkingJayaSetiaCCTV,
+  GovSmartParkingRipasBook,
+  GovSmartParkingAirportMallBook,
+  GovSmartParkingJayaSetiaBook,
   } from "@/pages/dashboard";
 
 
@@ -388,8 +396,7 @@ export const routesGov = [
 
 
 
-
-
+//Link Routes MTIC----------------------------------------------------
   {
     layout: "dashboardGov",
     pages: [
@@ -397,35 +404,49 @@ export const routesGov = [
         path: "/govweatherTutong",
         element: <GovWeatherTutong />,
       },
-    ],
-  },
-  {
-    layout: "dashboardGov",
-    pages: [
       {
         path: "/govweatherBruneiMuara",
         element: <GovWeatherBruneiMuara />,
       },
-    ],
-  },
-
-  {
-    layout: "dashboardGov",
-    pages: [
       {
         path: "/govweatherTemburong",
         element: <GovWeatherTemburong />,
       },
+      {
+        path: "/govSmartParkingAirportMall",
+        element: <GovSmartParkingAirportMall />,
+      },
+      {
+        path: "/govSmartParkingJayaSetia",
+        element: <GovSmartParkingJayaSetia />,
+      },
+      {
+        path: "/govSmartParkingRipasCCTV",
+        element: <GovSmartParkingRipasCCTV />,
+      },
+      {
+        path: "/govSmartParkingAirportMallCCTV",
+        element: <GovSmartParkingAirportMallCCTV />,
+      },
+      {
+        path: "/govSmartParkingJayaSetiaCCTV",
+        element: <GovSmartParkingJayaSetiaCCTV />,
+      },
+      {
+        path: "/govSmartParkingRipasBook",
+        element: <GovSmartParkingRipasBook />,
+      },
+      {
+        path: "/govSmartParkingAirportMallBook",
+        element: <GovSmartParkingAirportMallBook />,
+      },
+      {
+        path: "/govSmartParkingJayaSetiaBook",
+        element: <GovSmartParkingJayaSetiaBook />,
+      },
     ],
   },
-
-
-
-
-
-
-
-
+ 
 
 
 ];

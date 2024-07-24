@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useState } from "react";
 import {
   Card,
   CardHeader,
@@ -8,18 +7,50 @@ import {
   CardFooter,
   Button,
   Chip,
+  Input,
+  List, 
+  ListItem,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
-import { SmartparkingTable } from "@/govdata/MTICData/LandTransportData/smartparking-table-data";
-import SmartParkingRipas from '../../../../../../govdata/MTICData/LandTransportData/smartparking-Ripas-data';
+import SmartParkingRipas from '../../../../../../../govdata/MTICData/LandTransportData/SmartParkingData/smartparking-Ripas-data';
 
-export function GovSmartParkingRipas() {
+
+export function GovSmartParkingAirportMallBook() {
+
+
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const [selectedItem, setSelectedItem] = useState("");
+
+ const handleFocus = () => {
+    setShowDropdown(true);
+  };
+
+  const handleBlur = () => {
+    setTimeout(() => setShowDropdown(false), 200);
+  };
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleItemClick = (item) => {
+    setInputValue(item);
+    setSelectedItem(item);
+    setShowDropdown(false);
+  };
+
+
+  const items = ["A1", "A2", "A3", "A4"];
+
+
+
   return (
     
     <div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
-        <Typography variant="h6" color="white">Smart Parking Hospital Ripas</Typography>
+        <Typography variant="h6" color="white">Parking AirportMall</Typography>
       </CardHeader>
     </Card>
 
@@ -38,9 +69,9 @@ export function GovSmartParkingRipas() {
 
       <div className="flex flex-col justify-center items-center mt-2 space-x-1">
         <Link to="/dashboardGov/govSmartParkingRipas"><Button className="w-full md:w-40 mb-4">Smart Parking</Button></Link>
-        <Link to="/dashboardGov/govweatherTutong"><Button className="w-full md:w-40 mb-4">Traffic Jam Area</Button></Link>
-        <Link to="/dashboardGov/govweatherBruneiMuara"><Button className="w-full md:w-40 mb-4">Road Safety Complain</Button></Link>
-        <Link to="/dashboardGov/govweatherTemburong"><Button className="w-full md:w-40 mb-4">JPD Que Up</Button></Link>
+        <Link to=""><Button className="w-full md:w-40 mb-4">Traffic Jam Area</Button></Link>
+        <Link to=""><Button className="w-full md:w-40 mb-4">Road Safety Complain</Button></Link>
+        <Link to=""><Button className="w-full md:w-40 mb-4">JPD Que Up</Button></Link>
       </div>
 
   </Card>
@@ -126,126 +157,91 @@ export function GovSmartParkingRipas() {
   <div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
-        <Typography variant="h6" color="white">Smart Parking Area</Typography>
+        <Typography variant="h6" color="white">Parking AirportMall Book</Typography>
       </CardHeader>
 
-      <div className="overflow-x-scroll">
-        <table className="w-min min-w-[1000px] table-auto mx-auto">
-        <thead>
-        <tr>
-          {["Area", "Date", "Weather", "Temperature", "Total Parking", "Parking Available", "Status", "Condition", "Book Parking"].map((el) => (
-          <th
-            key={el}
-            className="border-b border-blue-gray-50 py-3 px-5 text-left"
-          >
-          <Typography
-            variant="small"
-            className="text-[11px] font-bold uppercase text-blue-gray-400"
+    
+      <CardBody className="flex justify-center">
+      <iframe 
+          width="90%" 
+          height="500" 
+          src="https://www.youtube.com/embed/mggV_VomHUo?si=QkGPlEFHYTuMdrc0" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen
+        ></iframe>
+      </CardBody>
+
+      <form className="mt-8 mb-2 mx-auto w-80 max-w-screen-lg lg:w-1/2">
+          <div className="mb-1 flex flex-col gap-6">
+            <Typography
+              variant="small"
+              color="blue-gray"
+              className="-mb-3 font-medium"
             >
-          {el}
-          </Typography>
-          </th>
-          ))}
-          </tr>
-          </thead>
-          <tbody>
+              License Number
+            </Typography>
+            <Input
+              size="lg"
+              placeholder="License Number"
+              className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+              labelProps={{
+                className: "before:content-none after:content-none",
+              }}
+            />
 
-        {SmartparkingTable.map(
-          ({ area, date, weather, temperature, totalParking, parkingAvailable, status, condition, bookParking}, key) => {
-          const className = `py-3 px-5 ${
-          key === SmartparkingTable.length - 1
-          ? ""
-          : "border-b border-blue-gray-50"
-          }`;
-
-
-          return (
-            <tr key={area}>
-            <td className={className}>
-            <div className="flex items-center gap-4">
-
-            <div>
-            <Link to="/dashboardGov/govSmartParkingRipas"><Button className="w-10 md:w-40">{area}</Button></Link>
-            </div>
-            </div>
-            </td>
-
-            <td className={className}>
-              <Typography className="text-xs font-semibold text-blue-gray-600">
-               {date}
-              </Typography>
-            </td>
-
-            <td className={className}>
-              <Typography className="text-xs font-semibold text-blue-gray-600">
-               {weather}
-              </Typography>
-            </td>
-
-          
-            
-            <td className={className}>
-              <Typography className="text-xs font-semibold text-blue-gray-600">
-               {temperature}
-              </Typography>
-            </td>
-
-            <td className={className}>
-              <Typography className="text-xs font-semibold text-blue-gray-600">
-               {totalParking}
-              </Typography>
-            </td>
-
-            <td className={className}>
-              <Typography className="text-xs font-semibold text-blue-gray-600">
-               {parkingAvailable}
-              </Typography>
-            </td>
-
-            <td className={className}>
-              <Typography
-                as="a"
-                href="#"
-                className="text-xs font-semibold text-blue-gray-600"
-                >
-               <Chip
-                variant="gradient"
-                color={status ? "green" : "red"}
-                value={status ? "normal" : "full"}
-                className="py-0.5 px-2 text-[11px] font-medium w-fit"
-                />
-              </Typography>
-            </td>
-
-            <td className={className}>
-              <Button className="w-sm md:w-40">{condition}</Button>
-            </td>
-
-            <td className={className}>
-              <Typography className="text-xs font-semibold text-blue-gray-600">
-               
-              </Typography>
-
-              <Button className="w-sm md:w-40">{bookParking}</Button>
-            </td>
-
-
-
-
-
-
-           
-            
-            </tr>
-            );
-            }
+            <Typography
+              variant="small"
+              color="blue-gray"
+              className="-mb-3 font-medium"
+            >
+              Parking Available
+            </Typography>
+            <Input
+              size="lg"
+              placeholder="Select an item"
+              value={inputValue}
+              onChange={handleInputChange}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+              className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+              labelProps={{
+                className: "before:content-none after:content-none",
+              }}
+            />
+            {showDropdown && (
+              <List className="mb-1 flex flex-col gap-6">
+                {items.map((item, index) => (
+                  <ListItem
+                    key={index}
+                    onClick={() => handleItemClick(item)}
+                    className="cursor-pointer"
+                  >
+                    {item}
+                  </ListItem>
+                ))}
+              </List>
             )}
-        </tbody>
-        </table> 
- </div>
+
+
+        <div className="flex space-x-4">
+        <Button className="w-full md:w-40 mb-4">Submit</Button>
+          <Link to="/dashboardGov/govSmartParkingAirportMall">
+            <Button className="w-full md:w-40 mb-4">Back</Button>
+          </Link>
+        </div>
+
+
+          </div>
+      </form>
+    
+      
+
     </Card>
   
-</div>
+  </div>
 
   {/* Smart Parking Area Table -------------------------------------------------------------------------*/}  
 
@@ -256,4 +252,4 @@ export function GovSmartParkingRipas() {
   );
 }
 
-export default GovSmartParkingRipas;
+export default GovSmartParkingAirportMallBook;
