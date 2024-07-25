@@ -165,7 +165,7 @@ export function GovSmartParkingAirportMall() {
             <div className="flex items-center gap-4">
 
             <div>
-            <Link to={`/dashboardGov/${PageLink}`}><Button className="w-10 md:w-40">{area}</Button></Link>
+            <Link to={`/dashboardGov/${PageLink}`}><Button className="w-sm md:w-40">{area}</Button></Link>
             </div>
             </div>
             </td>

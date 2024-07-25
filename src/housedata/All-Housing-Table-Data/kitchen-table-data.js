@@ -12,6 +12,7 @@ export const KitchenTableData = [
   {
     icon: "fas fa-lightbulb",
     name: "Lamp",
+    dashboard:"Pending Data",
     measure: ["Bulb"],
     online1: true,
     online2: false,
@@ -21,6 +22,7 @@ export const KitchenTableData = [
   {
     icon: "fas fa-plug",
     name: "Smart Plug",
+    dashboard:"Pending Data",
     measure: ["Plug"],
     online1: true,
     online2: false,
@@ -30,6 +32,7 @@ export const KitchenTableData = [
   {
     icon: "fas fa-video",
     name: "Smart CCTV 1",
+    dashboard:"Pending Data",
     measure: ["CCTV"],
     online1: true,
     online2: false,
@@ -39,6 +42,7 @@ export const KitchenTableData = [
   {
     icon: "fas fa-exclamation-triangle",
     name: "Smart Gas Detector",
+    dashboard:"Pending Data",
     measure: ["Gas Detector"],
     online1: true,
     online2: false,
@@ -48,6 +52,7 @@ export const KitchenTableData = [
   {
     icon: "fas fa-water",
     name: "Smart Water Leak",
+    dashboard:"Pending Data",
     measure: ["Water Leak"],
     online1: true,
     online2: false,
@@ -57,6 +62,7 @@ export const KitchenTableData = [
   {
     icon: "fas fa-exclamation-circle",
     name: "Smart Fire Alarm",
+    dashboard:"Pending Data",
     measure: ["Fire Alarm"],
     online1: true,
     online2: false,

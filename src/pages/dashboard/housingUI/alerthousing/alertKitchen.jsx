@@ -9,7 +9,8 @@ import {
   Chip,
   Tooltip,
   Progress,
-  Switch
+  Switch,
+  Button
 } from "@material-tailwind/react";
 import { KitchenTableData } from "@/housedata/All-Housing-Table-Data/kitchen-table-data";
 import { Link } from 'react-router-dom';
@@ -93,7 +94,7 @@ export function AlertKitchen() {
 
             <td className={className}>
               <Typography className="text-xs font-semibold text-blue-gray-600">
-              <Link to="/dashboard/LPGGasDashboard">{dashboard}</Link>
+              <Link to="/dashboard/LPGGasDashboard"><Button className="w-sm md:w-40">{dashboard}</Button></Link>
               </Typography>
             </td>
 
