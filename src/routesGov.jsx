@@ -25,6 +25,10 @@ import {
   GovSmartParkingRipasBook,
   GovSmartParkingAirportMallBook,
   GovSmartParkingJayaSetiaBook,
+  GovWeatherKBSensorMenu,
+  GovWeatherTutongSensorMenu,
+  GovWeatherBruneiMuaraSensorMenu,
+  GovWeatherTemburongSensorMenu,
   } from "@/pages/dashboard";
 
 
@@ -413,6 +417,34 @@ export const routesGov = [
         element: <GovWeatherTemburong />,
       },
       {
+        path: "/govweatherKBSensorsetupMenu",
+        element: <GovWeatherKBSensorMenu />,
+      },
+      {
+        path: "/govweatherTutongSensorsetupMenu",
+        element: <GovWeatherTutongSensorMenu />,
+      },
+      {
+        path: "/govweatherTemburongSensorsetupMenu",
+        element: <GovWeatherTemburongSensorMenu />,
+      },
+      {
+        path: "/govweatherBruneiMuaraSensorsetupMenu",
+        element: <GovWeatherBruneiMuaraSensorMenu />,
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+      {
         path: "/govSmartParkingAirportMall",
         element: <GovSmartParkingAirportMall />,
       },
@@ -444,6 +476,7 @@ export const routesGov = [
         path: "/govSmartParkingJayaSetiaBook",
         element: <GovSmartParkingJayaSetiaBook />,
       },
+
     ],
   },
  

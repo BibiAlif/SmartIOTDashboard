@@ -6,7 +6,7 @@ import {
   Button,
   Typography,
 } from "@material-tailwind/react";
-import localImage from '../../../../../public/img/063ad1330e0c.png';
+import localImage from '../../../../../../public/img/063ad1330e0c.png';
 
 
 export function SetupLPGGasTank() {

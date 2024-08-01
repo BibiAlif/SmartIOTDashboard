@@ -1,25 +1,35 @@
+//For Public ----------------------------------------------------------------------------
+export * from "@/pages/dashboard/PublicUI/homeforpublic/sideBarNavigation/homepublicmenu";
+export * from "@/pages/dashboard/PublicUI/weatherforecastpublicUI/weatherPublicKb";
+export * from "@/pages/dashboard/PublicUI/weatherforecastpublicUI/weatherPublicTutong";
+export * from "@/pages/dashboard/PublicUI/weatherforecastpublicUI/weatherPublicBruneiMuara";
+export * from "@/pages/dashboard/PublicUI/weatherforecastpublicUI/weatherPublicTemburong";
+export * from "@/pages/dashboard/PublicUI/homeforpublic/sideBarNavigation/publiclogout";
+//For Public ----------------------------------------------------------------------------
+
+
 //For Housing ----------------------------------------------------------------------------
-export * from "@/pages/dashboard/housingUI/sideBarNavigation/home";
-export * from "@/pages/dashboard/housingUI/sideBarNavigation/logout";
-export * from "@/pages/dashboard/housingUI/sideBarNavigation/setup";
-export * from "@/pages/dashboard/housingUI/sideBarNavigation/setting";
+export * from "@/pages/dashboard/PublicUI/housingUI/sideBarNavigation/home";
+export * from "@/pages/dashboard/PublicUI/housingUI/sideBarNavigation/logout";
+export * from "@/pages/dashboard/PublicUI/housingUI/sideBarNavigation/setup";
+export * from "@/pages/dashboard/PublicUI/homeforpublic/sideBarNavigation/setting";
 
-export * from "@/pages/dashboard/housingUI/alerthousing/alertKitchen";
-export * from "@/pages/dashboard/housingUI/alerthousing/alertHall";
-export * from "@/pages/dashboard/housingUI/alerthousing/alertToilet";
-export * from "@/pages/dashboard/housingUI/alerthousing/alertOutdoor";
+export * from "@/pages/dashboard/PublicUI/housingUI/alerthousing/alertKitchen";
+export * from "@/pages/dashboard/PublicUI/housingUI/alerthousing/alertHall";
+export * from "@/pages/dashboard/PublicUI/housingUI/alerthousing/alertToilet";
+export * from "@/pages/dashboard/PublicUI/housingUI/alerthousing/alertOutdoor";
 
-export * from "@/pages/dashboard/housingUI/SensorSetup/kitchen";
-export * from "@/pages/dashboard/housingUI/SensorSetup/hall";
-export * from "@/pages/dashboard/housingUI/SensorSetup/outdoor";
-export * from "@/pages/dashboard/housingUI/SensorSetup/toilet";
+export * from "@/pages/dashboard/PublicUI/housingUI/SensorSetup/kitchen";
+export * from "@/pages/dashboard/PublicUI/housingUI/SensorSetup/hall";
+export * from "@/pages/dashboard/PublicUI/housingUI/SensorSetup/outdoor";
+export * from "@/pages/dashboard/PublicUI/housingUI/SensorSetup/toilet";
 
-export * from "@/pages/dashboard/housingUI/SensorSetup/SetupGasLPGTank";
-export * from "@/pages/dashboard/housingUI/SensorSetup/AddNewSensor";
-export * from "@/pages/dashboard/housingUI/sideBarNavigation/GatewaySetup";
-export * from "@/pages/dashboard/housingUI/sideBarNavigation/AddNewGateway";
+export * from "@/pages/dashboard/PublicUI/housingUI/SensorSetup/SetupGasLPGTank";
+export * from "@/pages/dashboard/PublicUI/housingUI/SensorSetup/AddNewSensor";
+export * from "@/pages/dashboard/PublicUI/housingUI/sideBarNavigation/GatewaySetup";
+export * from "@/pages/dashboard/PublicUI/housingUI/sideBarNavigation/AddNewGateway";
 
-export * from "@/pages/dashboard/housingUI/LPGGASDashboard/LPGGasDashboard";
+export * from "@/pages/dashboard/PublicUI/housingUI/LPGGASDashboard/LPGGasDashboard";
 //For Housing ----------------------------------------------------------------------------
 
 
@@ -30,10 +40,14 @@ export * from "@/pages/dashboard/GovernUI/SiteBarNavigation/govlogout";
 //For Gov ---------------------------------------------------------------------------------
 
 //For MTIC ---------------------------------------------------------------------------------
-export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/govweatherKB";
-export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/govweatherTutong";
-export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/govweatherTemburong";
-export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/govweatherBruneiMuara";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/KualaBelaitWeather/govweatherKB";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/KualaBelaitWeather/govweatherKBSensorsetupMenu";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TutongWeather/govweatherTutong";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TutongWeather/govweatherTutongSensorsetupMenu";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TemburongWeather/govweatherTemburong";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TemburongWeather/govweatherTemburongSensorsetupMenu";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/BruneiMuaraWeather/govweatherBruneiMuara";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/BruneiMuaraWeather/govweatherBruneiMuaraSensorsetupMenu";
 
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingRipas";
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingAirportMall";

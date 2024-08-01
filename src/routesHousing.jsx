@@ -1,14 +1,11 @@
 import {
   HomeIcon,
-  UserCircleIcon,
   TableCellsIcon,
-  InformationCircleIcon,
+  ListBulletIcon,
 } from "@heroicons/react/24/solid";
 import React, { useState } from 'react';
 import { Home, 
-         Category, 
-         Setting, 
-         Logout, 
+         Category,
          AlertKitchen, 
          AlertHall, 
          AlertToilet, 
@@ -22,6 +19,7 @@ import { Home,
          Addnewsensor,
          GatewaySetup,
          AddnewGateway,
+         HomePublicMenu,
          } from "@/pages/dashboard";
 
 
@@ -30,7 +28,7 @@ const icon = {
 };
 
 
-export const routes = [
+export const routesHouse = [
   {
     layout: "dashboard",
     pages: [
@@ -40,6 +38,25 @@ export const routes = [
         path: "/home",
         element: <Home />,
       },
+    ],
+  },
+
+{
+    layout: "dashboardPublic",
+    pages: [
+      {
+        icon: <ListBulletIcon {...icon} />,
+        name: "Menu",
+        path: "/homepublicmenu",
+        element: <HomePublicMenu />,
+      },
+    ],
+  },
+
+
+  {
+    layout: "dashboard",
+    pages: [
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Control",
@@ -85,21 +102,16 @@ export const routes = [
         path: "/GatewaySetup",
         element: <GatewaySetup />,
       },
-      {
-        icon: <i className="fas fa-gear" />,
-        name: "Setting",
-        path: "/setting",
-        element: <Setting />,
-      },
-      {
-        icon: <i className="fas fa-sign-out" />,
-        name: "Logout",
-        path: "/logout",
-        element: <Logout />,
-      },
-    ],
+
+
+
+    ]
   },
 
+
+
+
+  
   // Add Alerttest route outside the pages array to keep it hidden from the menu
   {
     layout: "dashboard",
@@ -137,8 +149,15 @@ export const routes = [
         element: <AddnewGateway />,
       },
     ],
+
+
   },
 ]
 
-        
-export default routes;
+       
+
+
+
+
+
+export default routesHouse;

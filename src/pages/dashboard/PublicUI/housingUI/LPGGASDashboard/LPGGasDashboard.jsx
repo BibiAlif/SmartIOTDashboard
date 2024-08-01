@@ -11,7 +11,7 @@ import {
 
 //import { KitchenTableData, HallTableData, ToiletTableData, OutdoorTableData } from "@/housedata";
 
-import { fetchLPGData, LPGTableData } from "../../../../housedata/All-Housing-Table-Data/LPG-gas-table-data";
+import { fetchLPGData, LPGTableData } from "../../../../../housedata/All-Housing-Table-Data/LPG-gas-table-data";
 
 export function LPGGasDashboard() {
 

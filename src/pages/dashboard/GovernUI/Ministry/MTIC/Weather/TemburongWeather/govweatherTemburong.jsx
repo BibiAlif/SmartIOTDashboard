@@ -11,7 +11,7 @@ import {
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
 import { WeatherTemburong } from "@/govdata/MTICData/WeatherForecastData/weatherTemburong-table-data";
-import WeatherTemburongForecast from '../../../../../../govdata/MTICData/WeatherForecastData/weatherTemburong-forecast-data';
+import WeatherTemburongForecast from '../../../../../../../govdata/MTICData/WeatherForecastData/weatherTemburong-forecast-data';
 
 export function GovWeatherTemburong() {
   return (

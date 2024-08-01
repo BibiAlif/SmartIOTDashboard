@@ -10,10 +10,10 @@ import {
   Chip,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
-import { WeatherKb } from "@/govdata/MTICData/WeatherForecastData/weatherKB-table-data";
-import WeatherKBForecast from '../../../../../../govdata/MTICData/WeatherForecastData/weatherKB-forecast-data';
+import { WeatherBruneiMuara } from "@/govdata/MTICData/WeatherForecastData/weatherBruneiMuara-table-data";
+import WeatherBruneiMuaraForecast from '../../../../govdata/MTICData/WeatherForecastData/weatherBruneiMuara-forecast-data';
 
-export function GovWeatherKB() {
+export function WeatherPublicBruneiMuara() {
   return (
     
     <div className="mt-14 mb-4 flex flex-col gap-6" >
@@ -35,13 +35,13 @@ export function GovWeatherKB() {
       <i className="fas fa-globe" style={{ fontSize: '100px', color: 'black' }} />
     </CardBody>
 
-      <Typography variant="h5" color="blue-gray" className="mb-2">Forecast Report Kuala Belait</Typography>
+      <Typography variant="h5" color="blue-gray" className="mb-2">Forecast Report Brunei Muara</Typography>
 
       <div className="flex flex-col justify-center items-center mt-2 space-x-1">
-        <Link to="/dashboardGov/govweatherKB"><Button className="w-full md:w-40 mb-4">Kuala Belait</Button></Link>
-        <Link to="/dashboardGov/govweatherTutong"><Button className="w-full md:w-40 mb-4">Tutong</Button></Link>
-        <Link to="/dashboardGov/govweatherBruneiMuara"><Button className="w-full md:w-40 mb-4">Brunei Muara</Button></Link>
-        <Link to="/dashboardGov/govweatherTemburong"><Button className="w-full md:w-40 mb-4">Temburong</Button></Link>
+        <Link to="/dashboardPublic/weatherPublicKB"><Button className="w-full md:w-40 mb-4">Kuala Belait</Button></Link>
+        <Link to="/dashboardPublic/weatherPublicTutong"><Button className="w-full md:w-40 mb-4">Tutong</Button></Link>
+        <Link to="/dashboardPublic/weatherPublicBruneiMuara"><Button className="w-full md:w-40 mb-4">Brunei Muara</Button></Link>
+        <Link to="/dashboardPublic/weatherPublicTemburong"><Button className="w-full md:w-40 mb-4">Temburong</Button></Link>
       </div>
 
   </Card>
@@ -50,7 +50,7 @@ export function GovWeatherKB() {
 
 
 
-      {WeatherKBForecast.map((forecast, index) => (
+      {WeatherBruneiMuaraForecast.map((forecast, index) => (
         <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
           <Card className="h-96 text-center justify-center items-center">
             <div className="mt-4"> {/* Adding margin-top for space */}
@@ -86,7 +86,7 @@ export function GovWeatherKB() {
       ))}
 
 
-{WeatherKBForecast.map((forecast, index) => (
+{WeatherBruneiMuaraForecast.map((forecast, index) => (
 <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 ">
   <Card className="h-96 text-center justify-center items-center">
     <div className="mt-4"> {/* Adding margin-top for space */}
@@ -107,7 +107,7 @@ export function GovWeatherKB() {
 
 
 
-{WeatherKBForecast.map((forecast, index) => (
+{WeatherBruneiMuaraForecast.map((forecast, index) => (
 <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 ">
   <Card className="h-96 text-center justify-center items-center">
     <div className="mt-4"> {/* Adding margin-top for space */}
@@ -153,10 +153,10 @@ export function GovWeatherKB() {
           </thead>
           <tbody>
 
-        {WeatherKb.map(
+        {WeatherBruneiMuara.map(
           ({ days, dateformat, temperature, fahrenheit, humidity, windy, weather, alert}, key) => {
           const className = `py-3 px-5 ${
-          key === WeatherKb.length - 1
+          key === WeatherBruneiMuara.length - 1
           ? ""
           : "border-b border-blue-gray-50"
           }`;
@@ -262,4 +262,4 @@ export function GovWeatherKB() {
   );
 }
 
-export default GovWeatherKB;
+export default WeatherPublicBruneiMuara;

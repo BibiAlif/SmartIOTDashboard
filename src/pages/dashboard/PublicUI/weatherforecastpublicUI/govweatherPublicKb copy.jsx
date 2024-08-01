@@ -10,16 +10,16 @@ import {
   Chip,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
-import { SmartparkingTable } from "@/govdata/MTICData/LandTransportData/SmartParkingData/smartparking-table-data";
-import SmartParkingRipas from '../../../../../../../govdata/MTICData/LandTransportData/SmartParkingData/smartparking-Ripas-data';
+import { WeatherKb } from "@/govdata/MTICData/WeatherForecastData/weatherKB-table-data";
+import WeatherKBForecast from '../../../../govdata/MTICData/WeatherForecastData/WeatherForecaseKb/weatherKB-forecast-data';
 
-export function GovSmartParkingRipas() {
+export function GovWeatherPublicKB() {
   return (
     
     <div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
-        <Typography variant="h6" color="white">Parking Hospital Ripas</Typography>
+        <Typography variant="h6" color="white">Brunei Darussalam Weather Forecast</Typography>
       </CardHeader>
     </Card>
 
@@ -31,50 +31,54 @@ export function GovSmartParkingRipas() {
 
 <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 p-2">
   <Card className="h-auto text-center">
-
     <CardBody>
-      <i className="fas fa-car-alt" style={{ fontSize: '80px', color: 'black' }} />
+      <i className="fas fa-globe" style={{ fontSize: '100px', color: 'black' }} />
     </CardBody>
 
+      <Typography variant="h5" color="blue-gray" className="mb-2">Forecast Report Kuala Belait</Typography>
+
       <div className="flex flex-col justify-center items-center mt-2 space-x-1">
-        <Link to="/dashboardGov/govSmartParkingRipas"><Button className="w-full md:w-40 mb-4">Smart Parking</Button></Link>
-        <Link to=""><Button className="w-full md:w-40 mb-4">Traffic Jam Area</Button></Link>
-        <Link to=""><Button className="w-full md:w-40 mb-4">Bus Tracker</Button></Link>
+        <Link to="/dashboardGov/govweatherKB"><Button className="w-full md:w-40 mb-4">Kuala Belait</Button></Link>
+        <Link to="/dashboardGov/govweatherTutong"><Button className="w-full md:w-40 mb-4">Tutong</Button></Link>
+        <Link to="/dashboardGov/govweatherBruneiMuara"><Button className="w-full md:w-40 mb-4">Brunei Muara</Button></Link>
+        <Link to="/dashboardGov/govweatherTemburong"><Button className="w-full md:w-40 mb-4">Temburong</Button></Link>
       </div>
 
   </Card>
 </div>
 
 
-      {SmartParkingRipas.map((parkingdata, index) => (
+
+
+      {WeatherKBForecast.map((forecast, index) => (
         <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
           <Card className="h-96 text-center justify-center items-center">
             <div className="mt-4"> {/* Adding margin-top for space */}
-              <Typography variant="h5" color="blue-gray" className="mb-2">Location</Typography>
+              <Typography variant="h5" color="blue-gray" className="mb-2">Today Forecast</Typography>
             </div>
             <CardBody>
-              <i className={parkingdata.icon} style={{ fontSize: '100px', color: 'black' }} />
+              <i className={forecast.icon} style={{ fontSize: '100px', color: 'black' }} />
             </CardBody>
 
             <CardFooter className="pt-0">
               <div className="flex items-center mb-2">
-                <i className="fas fa-hospital-alt mr-2"></i>
-                <Typography variant="h6" color="blue-gray">{parkingdata.location}</Typography>
+                <i className="fas fa-calendar-alt mr-2"></i>
+                <Typography variant="h6" color="blue-gray">{forecast.dateforecast}</Typography>
               </div>
 
               <div className="flex items-center mb-2">
                 <i className="fas fa-calendar-alt mr-2"></i>
-                <Typography variant="h6" color="blue-gray">{parkingdata.dateformat}</Typography>
+                <Typography variant="h6" color="blue-gray">{forecast.dateformat}</Typography>
               </div>
 
               <div className="flex items-center mb-2">
                 <i className="fas fa-sun mr-2"></i>
-                <Typography variant="h6" color="blue-gray">{parkingdata.weather}</Typography>
+                <Typography variant="h6" color="blue-gray">{forecast.weather}</Typography>
               </div>
 
               <div className="flex items-center mb-2">
                 <i className="fas fa-thermometer-three-quarters mr-2"></i>
-                <Typography variant="h6" color="blue-gray">{parkingdata.temperature}</Typography>
+                <Typography variant="h6" color="blue-gray">{forecast.temperature}</Typography>
               </div>
             </CardFooter>
           </Card>
@@ -82,18 +86,19 @@ export function GovSmartParkingRipas() {
       ))}
 
 
-{SmartParkingRipas.map((parkingdata, index) => (
+{WeatherKBForecast.map((forecast, index) => (
 <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 ">
   <Card className="h-96 text-center justify-center items-center">
     <div className="mt-4"> {/* Adding margin-top for space */}
-      <Typography variant="h5" color="blue-gray" className="mb-2">Total Parking</Typography>
+      <Typography variant="h5" color="blue-gray" className="mb-2">Weather News</Typography>
     </div>
     <CardBody>
       <i className="fas fa-bell" style={{ fontSize: '100px', color: 'black' }} />
     </CardBody>
 
     <CardFooter className="pt-0">
-    <Typography variant="h3" color="blue-gray" className="mb-2">{parkingdata.totalparking}</Typography>
+    <Typography variant="h6" color="blue-gray" className="mb-2">{forecast.news}</Typography>
+    
     </CardFooter>
   </Card>
 </div>
@@ -102,15 +107,14 @@ export function GovSmartParkingRipas() {
 
 
 
-{SmartParkingRipas.map((parkingdata, index) => (
+{WeatherKBForecast.map((forecast, index) => (
 <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 ">
   <Card className="h-96 text-center justify-center items-center">
     <div className="mt-4"> {/* Adding margin-top for space */}
-      <Typography variant="h5" color="blue-gray" className="mb-2">Parking Available</Typography>
+      <Typography variant="h5" color="blue-gray" className="mb-2">Alert Status</Typography>
     </div>
     <CardBody>
-    <img src={parkingdata.status} alt="Alert Image" className="mt-4" style={{ width: '100%', height: 'auto' }} />
-    <Typography variant="h3" color="blue-gray" className="mb-2">{parkingdata.parkingavailable}</Typography>
+    <img src={forecast.status} alt="Alert Image" className="mt-4" style={{ width: '100%', height: 'auto' }} />
     </CardBody>
   </Card>
 </div>
@@ -121,18 +125,18 @@ export function GovSmartParkingRipas() {
   {/*  2 Card header -------------------------------------------------------------------------*/}  
 
 
-  {/* Smart Parking Area Table -------------------------------------------------------------------------*/}  
+  {/* Weather Table -------------------------------------------------------------------------*/}  
   <div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
-        <Typography variant="h6" color="white">Parking Area</Typography>
+        <Typography variant="h6" color="white">Expected Weather Days Forecast</Typography>
       </CardHeader>
 
       <div className="overflow-x-scroll">
         <table className="w-min min-w-[1000px] table-auto mx-auto">
         <thead>
         <tr>
-          {["Area", "Date", "Weather", "Temperature", "Total Parking", "Parking Available", "Status", "Condition", "Book Parking"].map((el) => (
+          {["Days", "Date", "Temperature", "Fahrenheit", "Humidity", "Windy", "Weather", "Alert"].map((el) => (
           <th
             key={el}
             className="border-b border-blue-gray-50 py-3 px-5 text-left"
@@ -149,35 +153,50 @@ export function GovSmartParkingRipas() {
           </thead>
           <tbody>
 
-        {SmartparkingTable.map(
-          ({ area, date, weather, temperature, totalParking, parkingAvailable, status, condition, bookParking, PageLink, cctvlink, booklink }, key) => {
+        {WeatherKb.map(
+          ({ days, dateformat, temperature, fahrenheit, humidity, windy, weather, alert}, key) => {
           const className = `py-3 px-5 ${
-          key === SmartparkingTable.length - 1
+          key === WeatherKb.length - 1
           ? ""
           : "border-b border-blue-gray-50"
           }`;
 
 
           return (
-            <tr key={area}>
+            <tr key={days}>
             <td className={className}>
             <div className="flex items-center gap-4">
 
             <div>
-            <Link to={`/dashboardGov/${PageLink}`}><Button className="w-sm md:w-40">{area}</Button></Link>
+            <Typography
+              variant="small"
+              color="blue-gray"
+              className="font-semibold"
+              >
+              {days}
+            </Typography>
+
             </div>
             </div>
             </td>
 
             <td className={className}>
               <Typography className="text-xs font-semibold text-blue-gray-600">
-               {date}
+               {dateformat}
               </Typography>
             </td>
 
             <td className={className}>
               <Typography className="text-xs font-semibold text-blue-gray-600">
-               {weather}
+               {temperature}
+              </Typography>
+            </td>
+
+
+
+            <td className={className}>
+              <Typography className="text-xs font-semibold text-blue-gray-600">
+               {fahrenheit}
               </Typography>
             </td>
 
@@ -185,21 +204,24 @@ export function GovSmartParkingRipas() {
             
             <td className={className}>
               <Typography className="text-xs font-semibold text-blue-gray-600">
-               {temperature}
+               {humidity}
               </Typography>
             </td>
 
-            <td className={className}>
-              <Typography className="text-xs font-semibold text-blue-gray-600">
-               {totalParking}
-              </Typography>
-            </td>
 
             <td className={className}>
               <Typography className="text-xs font-semibold text-blue-gray-600">
-               {parkingAvailable}
+               {windy}
               </Typography>
             </td>
+
+
+            <td className={className}>
+              <Typography className="text-xs font-semibold text-blue-gray-600">
+               {weather}
+              </Typography>
+            </td>
+
 
             <td className={className}>
               <Typography
@@ -209,23 +231,12 @@ export function GovSmartParkingRipas() {
                 >
                <Chip
                 variant="gradient"
-                color={status ? "green" : "red"}
-                value={status ? "normal" : "full"}
+                color={alert ? "green" : "yellow"}
+                value={alert ? "normal" : "alert"}
                 className="py-0.5 px-2 text-[11px] font-medium w-fit"
                 />
               </Typography>
             </td>
-
-            <td className={className}>
-            <Link to={`/dashboardGov/${cctvlink}`}><Button className="w-sm md:w-40">{condition}</Button></Link>
-            </td>
-
-            <td className={className}>
-              <Link to={`/dashboardGov/${booklink}`}><Button className="w-sm md:w-40">{bookParking}</Button></Link>
-            </td>
-
-
-
 
 
 
@@ -242,7 +253,7 @@ export function GovSmartParkingRipas() {
   
 </div>
 
-  {/* Smart Parking Area Table -------------------------------------------------------------------------*/}  
+  {/* Weather Table -------------------------------------------------------------------------*/}  
 
 
 
@@ -251,4 +262,4 @@ export function GovSmartParkingRipas() {
   );
 }
 
-export default GovSmartParkingRipas;
+export default GovWeatherPublicKB;

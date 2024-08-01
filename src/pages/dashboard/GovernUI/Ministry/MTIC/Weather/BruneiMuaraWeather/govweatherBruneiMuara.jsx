@@ -11,7 +11,7 @@ import {
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
 import { WeatherBruneiMuara } from "@/govdata/MTICData/WeatherForecastData/weatherBruneiMuara-table-data";
-import WeatherBruneiMuaraForecast from '../../../../../../govdata/MTICData/WeatherForecastData/weatherBruneiMuara-forecast-data';
+import WeatherBruneiMuaraForecast from '../../../../../../../govdata/MTICData/WeatherForecastData/weatherBruneiMuara-forecast-data';
 
 export function GovWeatherBruneiMuara() {
   return (

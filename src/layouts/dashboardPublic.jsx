@@ -2,21 +2,21 @@ import { Routes, Route } from "react-router-dom";
 import { Cog6ToothIcon } from "@heroicons/react/24/solid";
 import { IconButton } from "@material-tailwind/react";
 import {
-  Sidenav,
+  PublicSidenav,
   DashboardNavbar,
   Configurator,
   Footer,
 } from "@/widgets/layout";
-import routes from "@/routesHousing";
+import routespublic from "@/routespublic";
 import { useMaterialTailwindController, setOpenConfigurator } from "@/context";
 
-export function Dashboard() {
+export function HomePublicMenu() {
   const [controller, dispatch] = useMaterialTailwindController();
   const { sidenavType } = controller;
 
   const renderRoutes = (routes) =>
     routes.map(({ layout, pages }) =>
-      layout === "dashboard"
+      layout === "dashboardPublic"
         ? pages.map(({ path, element, children }) =>
             children
               ? children.map(({ path: childPath, element: childElement }) => (
@@ -29,8 +29,8 @@ export function Dashboard() {
 
   return (
     <div className="min-h-screen bg-blue-gray-50/50">
-      <Sidenav
-        routes={routes}
+      <PublicSidenav
+        routes={routespublic}
         brandImg={
           sidenavType === "dark" ? "/img/logo-ct.png" : "/img/logo-ct-dark.png"
         }
@@ -48,7 +48,7 @@ export function Dashboard() {
           <Cog6ToothIcon className="h-5 w-5" />
         </IconButton>
         <Routes>
-          {renderRoutes(routes)}
+          {renderRoutes(routespublic)}
         </Routes>
         <div className="text-blue-gray-600">
           <Footer />
@@ -58,6 +58,6 @@ export function Dashboard() {
   );
 }
 
-Dashboard.displayName = "/src/layout/dashboard.jsx";
+HomePublicMenu.displayName = "/src/layout/dashboardPublic.jsx";
 
-export default Dashboard;
+export default HomePublicMenu;

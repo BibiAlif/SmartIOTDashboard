@@ -10,10 +10,10 @@ import {
   Chip,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
-import { WeatherTutong } from "@/govdata/MTICData/WeatherForecastData/weatherTutong-table-data";
-import WeatherTutongForecast from '../../../../../../govdata/MTICData/WeatherForecastData/weatherTutong-forecast-data';
+import { WeatherTemburong } from "@/govdata/MTICData/WeatherForecastData/weatherTemburong-table-data";
+import WeatherTemburongForecast from '../../../../govdata/MTICData/WeatherForecastData/weatherTemburong-forecast-data';
 
-export function GovWeatherTutong() {
+export function WeatherPublicTemburong() {
   return (
     
     <div className="mt-14 mb-4 flex flex-col gap-6" >
@@ -35,13 +35,13 @@ export function GovWeatherTutong() {
       <i className="fas fa-globe" style={{ fontSize: '100px', color: 'black' }} />
     </CardBody>
 
-      <Typography variant="h5" color="blue-gray" className="mb-2">Forecast Report Tutong</Typography>
+      <Typography variant="h5" color="blue-gray" className="mb-2">Forecast Report Temburong</Typography>
 
       <div className="flex flex-col justify-center items-center mt-2 space-x-1">
-        <Link to="/dashboardGov/govweatherKB"><Button className="w-full md:w-40 mb-4">Kuala Belait</Button></Link>
-        <Link to="/dashboardGov/govweatherTutong"><Button className="w-full md:w-40 mb-4">Tutong</Button></Link>
-        <Link to="/dashboardGov/govweatherBruneiMuara"><Button className="w-full md:w-40 mb-4">Brunei Muara</Button></Link>
-        <Link to="/dashboardGov/govweatherTemburong"><Button className="w-full md:w-40 mb-4">Temburong</Button></Link>
+        <Link to="/dashboardPublic/weatherPublicKB"><Button className="w-full md:w-40 mb-4">Kuala Belait</Button></Link>
+        <Link to="/dashboardPublic/weatherPublicTutong"><Button className="w-full md:w-40 mb-4">Tutong</Button></Link>
+        <Link to="/dashboardPublic/weatherPublicBruneiMuara"><Button className="w-full md:w-40 mb-4">Brunei Muara</Button></Link>
+        <Link to="/dashboardPublic/weatherPublicTemburong"><Button className="w-full md:w-40 mb-4">Temburong</Button></Link>
       </div>
 
   </Card>
@@ -50,7 +50,7 @@ export function GovWeatherTutong() {
 
 
 
-      {WeatherTutongForecast.map((forecast, index) => (
+      {WeatherTemburongForecast.map((forecast, index) => (
         <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
           <Card className="h-96 text-center justify-center items-center">
             <div className="mt-4"> {/* Adding margin-top for space */}
@@ -86,7 +86,7 @@ export function GovWeatherTutong() {
       ))}
 
 
-{WeatherTutongForecast.map((forecast, index) => (
+{WeatherTemburongForecast.map((forecast, index) => (
 <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 ">
   <Card className="h-96 text-center justify-center items-center">
     <div className="mt-4"> {/* Adding margin-top for space */}
@@ -107,7 +107,7 @@ export function GovWeatherTutong() {
 
 
 
-{WeatherTutongForecast.map((forecast, index) => (
+{WeatherTemburongForecast.map((forecast, index) => (
 <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 ">
   <Card className="h-96 text-center justify-center items-center">
     <div className="mt-4"> {/* Adding margin-top for space */}
@@ -153,10 +153,10 @@ export function GovWeatherTutong() {
           </thead>
           <tbody>
 
-        {WeatherTutong.map(
+        {WeatherTemburong.map(
           ({ days, dateformat, temperature, fahrenheit, humidity, windy, weather, alert}, key) => {
           const className = `py-3 px-5 ${
-          key === WeatherTutong.length - 1
+          key === WeatherTemburong.length - 1
           ? ""
           : "border-b border-blue-gray-50"
           }`;
@@ -231,8 +231,8 @@ export function GovWeatherTutong() {
                 >
                <Chip
                 variant="gradient"
-                color={alert ? "green" : "red"}
-                value={alert ? "normal" : "danger"}
+                color={alert ? "green" : "yellow"}
+                value={alert ? "normal" : "alert"}
                 className="py-0.5 px-2 text-[11px] font-medium w-fit"
                 />
               </Typography>
@@ -262,4 +262,4 @@ export function GovWeatherTutong() {
   );
 }
 
-export default GovWeatherTutong;
+export default WeatherPublicTemburong;

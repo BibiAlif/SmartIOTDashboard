@@ -8,9 +8,9 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { useMaterialTailwindController, setOpenSidenav } from "@/context";
-import Dropdown from "../../../src/pages/dashboard/PublicUI/housingUI/sideBarNavigation/dropdown"; // import the Dropdown component
+//import Dropdown from "../../pages/dashboard/GovernUI/SiteBarNavigation/govdropdown"; // import the Dropdown component
 
-export function Sidenav({ brandImg, brandName, routes }) {
+export function PublicSidenav({ brandImg, brandName, routes }) {
   const [controller, dispatch] = useMaterialTailwindController();
   const { sidenavColor, sidenavType, openSidenav } = controller;
   const sidenavTypes = {
@@ -24,6 +24,9 @@ export function Sidenav({ brandImg, brandName, routes }) {
       className={`${sidenavTypes[sidenavType]} ${
         openSidenav ? "translate-x-0" : "-translate-x-80"
       } fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)] w-72 rounded-xl transition-transform duration-300 xl:translate-x-0 border border-blue-gray-100`}
+      style={{
+        overflowY: "auto", // Enable vertical scrolling
+      }}
     >
       <div className="relative">
         <Link to="/" className="py-6 px-8 text-center">
@@ -51,9 +54,9 @@ export function Sidenav({ brandImg, brandName, routes }) {
             {title && (
               <li className="mx-3.5 mt-4 mb-2">
                 <Typography
-                  variant="small"
+                  variant="small" // Use a smaller variant
                   color={sidenavType === "dark" ? "white" : "blue-gray"}
-                  className="font-black uppercase opacity-75"
+                  className="font-bold text-sm uppercase opacity-75 text-left" // Adjust font size and alignment
                 >
                   {title}
                 </Typography>
@@ -75,13 +78,13 @@ export function Sidenav({ brandImg, brandName, routes }) {
                             ? "white"
                             : "blue-gray"
                         }
-                        className="flex items-center gap-4 px-4 capitalize"
+                        className="flex items-center gap-4 px-4 capitalize text-left" // Ensure text is left-aligned
                         fullWidth
                       >
                         {icon}
                         <Typography
                           color="inherit"
-                          className="font-medium capitalize"
+                          className="font-medium capitalize text-sm" // Adjust font size
                         >
                           {name}
                         </Typography>
@@ -98,17 +101,17 @@ export function Sidenav({ brandImg, brandName, routes }) {
   );
 }
 
-Sidenav.defaultProps = {
+PublicSidenav.defaultProps = {
   brandImg: "/img/logo-ct.png",
   brandName: "Smart Nation Through Digital Transformation",
 };
 
-Sidenav.propTypes = {
+PublicSidenav.propTypes = {
   brandImg: PropTypes.string,
   brandName: PropTypes.string,
   routes: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-Sidenav.displayName = "/src/widgets/layout/sidnave.jsx";
+PublicSidenav.displayName = "/src/widgets/layout/publicsidenav.jsx";
 
-export default Sidenav;
+export default PublicSidenav;
