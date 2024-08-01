@@ -26,7 +26,7 @@ export function GovWeatherTutongSensorMenu() {
 
 {/* 2 Card header -------------------------------------------------------------------------*/}  
 
-<div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 p-2">
+<div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 p-2">
   <Card className="h-auto text-center">
     <CardBody>
       <i className="fas fa-satellite-dish" style={{ fontSize: '100px', color: 'black' }} />
@@ -38,7 +38,7 @@ export function GovWeatherTutongSensorMenu() {
 </div>
 
 
-<div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 p-2">
+<div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 p-2">
   <Card className="h-auto text-center">
     <CardBody>
       <i className="fas fa-wifi" style={{ fontSize: '100px', color: 'black' }} />

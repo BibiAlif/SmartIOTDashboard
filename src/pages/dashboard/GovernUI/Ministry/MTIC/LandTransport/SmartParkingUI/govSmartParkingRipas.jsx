@@ -29,7 +29,7 @@ export function GovSmartParkingRipas() {
 
 {/* 2 Card header -------------------------------------------------------------------------*/}  
 
-<div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 p-2">
+<div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 p-2">
   <Card className="h-auto text-center">
 
     <CardBody>
@@ -47,7 +47,7 @@ export function GovSmartParkingRipas() {
 
 
       {SmartParkingRipas.map((parkingdata, index) => (
-        <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
+        <div key={index} className="">
           <Card className="h-96 text-center justify-center items-center">
             <div className="mt-4"> {/* Adding margin-top for space */}
               <Typography variant="h5" color="blue-gray" className="mb-2">Location</Typography>

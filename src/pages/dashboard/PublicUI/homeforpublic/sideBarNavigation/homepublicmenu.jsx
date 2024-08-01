@@ -30,7 +30,7 @@ export function HomePublicMenu() {
 
 <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 ">
 <Link to="/dashboard/home">
-  <Card className="h-96 text-center justify-center items-center">
+  <Card className="mt-6 w-30 h-55 text-center justify-center items-center">
     <CardBody>
     <i className="fas fa-house-user fa-5x mt-4" style={{ color: 'black', width: '100%', height: 'auto' }}></i>
     <div className="mt-4"> {/* Adding margin-top for space */}
@@ -44,7 +44,7 @@ export function HomePublicMenu() {
 
 <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 ">
 <Link to="/dashboardPublic/weatherPublicKb">
-  <Card className="h-96 text-center justify-center items-center">
+  <Card className="mt-6 w-30 h-55 text-center justify-center items-center">
     <CardBody>
     <i className="fas fa-cloud-sun-rain fa-5x mt-4" style={{ color: 'black', width: '100%', height: 'auto' }}></i>
     <div className="mt-4"> {/* Adding margin-top for space */}
@@ -59,7 +59,7 @@ export function HomePublicMenu() {
 
 <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 ">
 <Link to="/dashboard/home">
-  <Card className="h-96 text-center justify-center items-center">
+  <Card className="mt-6 w-30 h-55 text-center justify-center items-center">
     <CardBody>
     <i className="fas fa-car-side fa-5x mt-4" style={{ color: 'black', width: '100%', height: 'auto' }}></i>
     <div className="mt-4"> {/* Adding margin-top for space */}
@@ -74,7 +74,7 @@ export function HomePublicMenu() {
 
 <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 ">
 <Link to="/dashboard/home">
-  <Card className="h-96 text-center justify-center items-center">
+  <Card className="mt-6 w-30 h-55 text-center justify-center items-center">
     <CardBody>
     <i className="fas fa-car fa-5x mt-4" style={{ color: 'black', width: '100%', height: 'auto' }}></i>
     <div className="mt-4"> {/* Adding margin-top for space */}
@@ -89,7 +89,7 @@ export function HomePublicMenu() {
 
 <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 ">
 <Link to="/dashboard/home">
-  <Card className="h-96 text-center justify-center items-center">
+  <Card className="mt-6 w-30 h-55 text-center justify-center items-center">
     <CardBody>
     <i className="fas fa-bus-alt fa-5x mt-4" style={{ color: 'black', width: '100%', height: 'auto' }}></i>
     <div className="mt-4"> {/* Adding margin-top for space */}

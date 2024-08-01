@@ -29,13 +29,13 @@ export function WeatherPublicTemburong() {
 
 {/* 2 Card header -------------------------------------------------------------------------*/}  
 
-<div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 p-2">
+<div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
   <Card className="h-auto text-center">
     <CardBody>
       <i className="fas fa-globe" style={{ fontSize: '100px', color: 'black' }} />
     </CardBody>
 
-      <Typography variant="h5" color="blue-gray" className="mb-2">Forecast Report Temburong</Typography>
+      <Typography variant="h5" color="blue-gray" className="mb-2">Temburong</Typography>
 
       <div className="flex flex-col justify-center items-center mt-2 space-x-1">
         <Link to="/dashboardPublic/weatherPublicKB"><Button className="w-full md:w-40 mb-4">Kuala Belait</Button></Link>
@@ -48,10 +48,8 @@ export function WeatherPublicTemburong() {
 </div>
 
 
-
-
-      {WeatherTemburongForecast.map((forecast, index) => (
-        <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
+ {WeatherTemburongForecast.map((forecast, index) => (
+        <div key={index} className="">
           <Card className="h-96 text-center justify-center items-center">
             <div className="mt-4"> {/* Adding margin-top for space */}
               <Typography variant="h5" color="blue-gray" className="mb-2">Today Forecast</Typography>
@@ -122,6 +120,8 @@ export function WeatherPublicTemburong() {
 
 
 </div>
+
+    
   {/*  2 Card header -------------------------------------------------------------------------*/}  
 
 

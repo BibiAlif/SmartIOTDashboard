@@ -29,6 +29,10 @@ import {
   GovWeatherTutongSensorMenu,
   GovWeatherBruneiMuaraSensorMenu,
   GovWeatherTemburongSensorMenu,
+  GovWeatherKBGatewaySetup,
+  GovWeatherKBGatewwaySetupForm,
+  GovWeatherKBSensorSetup,
+  GovWeatherKBSensorSetupForm,
   } from "@/pages/dashboard";
 
 
@@ -432,7 +436,22 @@ export const routesGov = [
         path: "/govweatherBruneiMuaraSensorsetupMenu",
         element: <GovWeatherBruneiMuaraSensorMenu />,
       },
-
+      {
+        path: "/govweatherKBGatewaySetup",
+        element: <GovWeatherKBGatewaySetup />,
+      },
+      {
+        path: "/govweatherKBGatewaySetupForm",
+        element: <GovWeatherKBGatewwaySetupForm />,
+      },
+{
+        path: "/govweatherKBSensorSetup",
+        element: <GovWeatherKBSensorSetup/>,
+      },
+      {
+        path: "/govweatherKBSensorSetupForm",
+        element: <GovWeatherKBSensorSetupForm />,
+      },
 
 
 

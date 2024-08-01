@@ -29,7 +29,7 @@ export function GovSmartParkingAirportMall() {
 
 {/* 2 Card header -------------------------------------------------------------------------*/}  
 
-<div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 p-2">
+<div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 p-2">
   <Card className="h-auto text-center">
 
     <CardBody>
@@ -39,7 +39,6 @@ export function GovSmartParkingAirportMall() {
       <div className="flex flex-col justify-center items-center mt-2 space-x-1">
         <Link to="/dashboardGov/govSmartParkingRipas"><Button className="w-full md:w-40 mb-4">Smart Parking</Button></Link>
         <Link to=""><Button className="w-full md:w-40 mb-4">Traffic Jam Area</Button></Link>
-        <Link to=""><Button className="w-full md:w-40 mb-4">Road Safety Complain</Button></Link>
         <Link to=""><Button className="w-full md:w-40 mb-4">JPD Que Up</Button></Link>
       </div>
 
@@ -48,7 +47,7 @@ export function GovSmartParkingAirportMall() {
 
 
       {smartparkingAirportMall.map((parkingdata, index) => (
-        <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
+        <div key={index} className="">
           <Card className="h-96 text-center justify-center items-center">
             <div className="mt-4"> {/* Adding margin-top for space */}
               <Typography variant="h5" color="blue-gray" className="mb-2">Location</Typography>
