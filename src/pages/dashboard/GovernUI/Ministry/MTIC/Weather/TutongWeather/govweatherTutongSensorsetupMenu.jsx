@@ -9,6 +9,10 @@ import {
   Chip,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
+import WeatherTutongTransmitted from '../../../../../../../govdata/MTICData/WeatherForecastData/WeatherForecaseTutong/weatherTutongTransmitted';
+import WeatherTutongSensorReadingdata from '../../../../../../../govdata/MTICData/WeatherForecastData/WeatherForecaseTutong/weatherTutongSensorReading-data';
+
+
 
 export function GovWeatherTutongSensorMenu() {
   return (
@@ -32,7 +36,7 @@ export function GovWeatherTutongSensorMenu() {
       <i className="fas fa-satellite-dish" style={{ fontSize: '100px', color: 'black' }} />
     </CardBody>
       <div className="flex flex-col justify-center items-center mt-2 space-x-1">
-        <Link to="/dashboardGov/govweatherKB"><Button className="w-full md:w-55 mb-4">Gateway Setup</Button></Link>
+        <Link to="/dashboardGov/govweatherTutongGatewaySetup"><Button className="w-full md:w-55 mb-4">Gateway Setup</Button></Link>
       </div>
   </Card>
 </div>
@@ -44,18 +48,237 @@ export function GovWeatherTutongSensorMenu() {
       <i className="fas fa-wifi" style={{ fontSize: '100px', color: 'black' }} />
     </CardBody>
       <div className="flex flex-col justify-center items-center mt-2 space-x-1">
-        <Link to="/dashboardGov/govweatherKB"><Button className="w-full md:w-40 mb-4">Sensor Setup</Button></Link>
+        <Link to="/dashboardGov/govweatherTutongSensorSetup"><Button className="w-full md:w-40 mb-4">Sensor Setup</Button></Link>
       </div>
   </Card>
 </div>
+</div>
+{/*  2 Card header -------------------------------------------------------------------------*/}  
+
+
+{/* Gateway Transmitted Table -------------------------------------------------------------------------*/}  
+<div className="mt-14 mb-4 flex flex-col gap-6" >
+    <Card>
+      <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
+        <Typography variant="h6" color="white">Multitech 1 Data Transmitted At Tutong</Typography>
+      </CardHeader>
+      </Card>
+       
+  
+      <div className="overflow-x-scroll">
+        <table className="w-min min-w-[1000px] table-auto mx-auto">
+        <thead>
+        <tr>
+          {["Id", "Status", "Speed", "Connection Type", "Transmitted data"].map((el) => (
+          <th
+            key={el}
+            className="border-b border-blue-gray-50 py-3 px-5 text-left"
+          >
+          <Typography
+            variant="small"
+            className="text-[11px] font-bold uppercase text-blue-gray-400"
+            >
+          {el}
+          </Typography>
+          </th>
+          ))}
+          </tr>
+          </thead>
+          <tbody>
+
+        {WeatherTutongTransmitted.map(
+          ({  id, status, Speed, connectionType, transmitteddata}, key) => {
+          const className = `py-3 px-5 ${
+          key === WeatherTutongTransmitted.length - 1
+          ? ""
+          : "border-b border-blue-gray-50"
+          }`;
+
+
+          return (
+            <tr key={id}>
+            <td className={className}>
+            <div className="flex items-center gap-4">
+
+            <div>
+            <Typography
+              variant="small"
+              color="blue-gray"
+              className="font-semibold"
+              >
+              {id}
+            </Typography>
+
+            </div>
+            </div>
+            </td>
+
+            <td className={className}>
+              <Typography
+                //as="a"
+                //href="#"
+                className="text-xs font-semibold text-blue-gray-600"
+                >
+               <Chip
+                variant="gradient"
+                color={status ? "green" : "red"}
+                value={status ? "Connected" : "Disconnected"}
+                className="py-0.5 px-2 text-[11px] font-medium w-fit"
+                />
+              </Typography>
+            </td>
+
+            <td className={className}>
+              <Typography className="text-xs font-semibold text-blue-gray-600">
+               {Speed}
+              </Typography>
+            </td>
+
+            <td className={className}>
+              <Typography className="text-xs font-semibold text-blue-gray-600">
+               {connectionType}
+              </Typography>
+            </td>
+
+            <td className={className}>
+              <Typography className="text-xs font-semibold text-blue-gray-600">
+               {transmitteddata}
+              </Typography>
+            </td>
+
+            
+            </tr>
+            );
+            }
+            )}
+        </tbody>
+        </table> 
+ </div>
+  
+{/* Gateway Transmitted Table -------------------------------------------------------------------------*/}  
+
+
+
+
+{/* Sensor Transmitted Table -------------------------------------------------------------------------*/}  
+  <div className="mt-14 mb-4 flex flex-col gap-6" >
+    <Card>
+      <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
+        <Typography variant="h6" color="white">Sensor 1 Reading At Tutong</Typography>
+      </CardHeader>
+      </Card>
+       
+  
+      <div className="overflow-x-scroll">
+        <table className="w-min min-w-[1000px] table-auto mx-auto">
+        <thead>
+        <tr>
+          {["Id", "Fahrenheight", "Temperature", "Humandity", "Windy", "Weather", "Alert"].map((el) => (
+          <th
+            key={el}
+            className="border-b border-blue-gray-50 py-3 px-5 text-left"
+          >
+          <Typography
+            variant="small"
+            className="text-[11px] font-bold uppercase text-blue-gray-400"
+            >
+          {el}
+          </Typography>
+          </th>
+          ))}
+          </tr>
+          </thead>
+          <tbody>
+
+        {WeatherTutongSensorReadingdata.map(
+          ({  id, Fahrenheight, Temperature, Humandity, Windy, Weather, Alert,}, key) => {
+          const className = `py-3 px-5 ${
+          key === WeatherTutongSensorReadingdata.length - 1
+          ? ""
+          : "border-b border-blue-gray-50"
+          }`;
+
+
+          return (
+            <tr key={id}>
+            <td className={className}>
+            <div className="flex items-center gap-4">
+
+            <div>
+            <Typography
+              variant="small"
+              color="blue-gray"
+              className="font-semibold"
+              >
+              {id}
+            </Typography>
+
+            </div>
+            </div>
+            </td>
+
+            <td className={className}>
+              <Typography className="text-xs font-semibold text-blue-gray-600">
+               {Fahrenheight}
+              </Typography>
+            </td>
+
+            <td className={className}>
+              <Typography className="text-xs font-semibold text-blue-gray-600">
+               {Temperature}
+              </Typography>
+            </td>
+
+            <td className={className}>
+              <Typography className="text-xs font-semibold text-blue-gray-600">
+               {Humandity}
+              </Typography>
+            </td>
+
+            <td className={className}>
+              <Typography className="text-xs font-semibold text-blue-gray-600">
+               {Windy}
+              </Typography>
+            </td>
+
+            <td className={className}>
+              <Typography className="text-xs font-semibold text-blue-gray-600">
+               {Weather}
+              </Typography>
+            </td>
+
+             <td className={className}>
+              <Typography
+                //as="a"
+                //href="#"
+                className="text-xs font-semibold text-blue-gray-600"
+                >
+               <Chip
+                variant="gradient"
+                color={Alert ? "green" : "red"}
+                value={Alert ? "Normal" : "Danger"}
+                className="py-0.5 px-2 text-[11px] font-medium w-fit"
+                />
+              </Typography>
+            </td>
+
+            
+            </tr>
+            );
+            }
+            )}
+        </tbody>
+        </table> 
+</div>
+</div>
+{/* Sensor Transmitted Table -------------------------------------------------------------------------*/}  
+
+
 
 
 
 
 </div>
-  {/*  2 Card header -------------------------------------------------------------------------*/}  
-
-
 </div>
   );
 }

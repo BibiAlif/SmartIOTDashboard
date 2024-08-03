@@ -10,8 +10,8 @@ import {
   Chip,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
-import { WeatherTemburong } from "@/govdata/MTICData/WeatherForecastData/weatherTemburong-table-data";
-import WeatherTemburongForecast from '../../../../govdata/MTICData/WeatherForecastData/weatherTemburong-forecast-data';
+import { WeatherTemburong } from "@/govdata/MTICData/WeatherForecastData/WeatherForecaseTemburong/weatherTemburong-table-data";
+import WeatherTemburongForecast from '../../../../govdata/MTICData/WeatherForecastData/WeatherForecaseTemburong/weatherTemburong-forecast-data';
 
 export function WeatherPublicTemburong() {
   return (

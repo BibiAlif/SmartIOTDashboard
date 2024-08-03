@@ -10,8 +10,8 @@ import {
   Chip,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
-import { WeatherTutong } from "@/govdata/MTICData/WeatherForecastData/weatherTutong-table-data";
-import WeatherTutongForecast from '../../../../govdata/MTICData/WeatherForecastData/weatherTutong-forecast-data';
+import { WeatherTutong } from "@/govdata/MTICData/WeatherForecastData/WeatherForecaseTutong/weatherTutong-table-data";
+import WeatherTutongForecast from '../../../../govdata/MTICData/WeatherForecastData/WeatherForecaseTutong/weatherTutong-forecast-data';
 
 export function WeatherPublicTutong() {
   return (

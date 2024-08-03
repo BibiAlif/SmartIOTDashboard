@@ -10,8 +10,8 @@ import {
   Chip,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
-import { WeatherBruneiMuara } from "@/govdata/MTICData/WeatherForecastData/weatherBruneiMuara-table-data";
-import WeatherBruneiMuaraForecast from '../../../../govdata/MTICData/WeatherForecastData/weatherBruneiMuara-forecast-data';
+import { WeatherBruneiMuara } from "@/govdata/MTICData/WeatherForecastData/WeatherForecaseBruneiMuara/weatherBruneiMuara-table-data";
+import WeatherBruneiMuaraForecast from '../../../../govdata/MTICData/WeatherForecastData/WeatherForecaseBruneiMuara/weatherBruneiMuara-forecast-data';
 
 export function WeatherPublicBruneiMuara() {
   return (

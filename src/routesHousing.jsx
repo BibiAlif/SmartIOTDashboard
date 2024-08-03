@@ -29,6 +29,20 @@ const icon = {
 
 
 export const routesHouse = [
+
+  {
+    layout: "dashboardPublic",
+    pages: [
+      {
+        icon: <ListBulletIcon {...icon} />,
+        name: "Menu",
+        path: "/homepublicmenu",
+        element: <HomePublicMenu />,
+      },
+    ],
+  },
+
+
   {
     layout: "dashboard",
     pages: [
@@ -41,17 +55,6 @@ export const routesHouse = [
     ],
   },
 
-{
-    layout: "dashboardPublic",
-    pages: [
-      {
-        icon: <ListBulletIcon {...icon} />,
-        name: "Menu",
-        path: "/homepublicmenu",
-        element: <HomePublicMenu />,
-      },
-    ],
-  },
 
 
   {

@@ -13,9 +13,6 @@ import {
   GovSetting,
   GovLogout,
   GovWeatherKB,
-  GovWeatherTutong,
-  GovWeatherBruneiMuara,
-  GovWeatherTemburong,
   GovSmartParkingRipas,
   GovSmartParkingAirportMall,
   GovSmartParkingJayaSetia,
@@ -25,16 +22,32 @@ import {
   GovSmartParkingRipasBook,
   GovSmartParkingAirportMallBook,
   GovSmartParkingJayaSetiaBook,
+
   GovWeatherKBSensorMenu,
-  GovWeatherTutongSensorMenu,
-  GovWeatherBruneiMuaraSensorMenu,
-  GovWeatherTemburongSensorMenu,
   GovWeatherKBGatewaySetup,
   GovWeatherKBGatewwaySetupForm,
   GovWeatherKBSensorSetup,
   GovWeatherKBSensorSetupForm,
-  } from "@/pages/dashboard";
 
+  GovWeatherTutongSensorMenu,
+  GovWeatherTutongGatewaySetup,
+  GovWeatherTutongGatewwaySetupForm,
+  GovWeatherTutongSensorSetup,
+  GovWeatherTutongSensorSetupForm,
+
+  GovWeatherBruneiMuaraSensorMenu,
+  GovWeatherBruneiMuaraGatewaySetup,
+  GovWeatherBruneiMuaraGatewwaySetupForm,
+  GovWeatherBruneiMuaraSensorSetup,
+  GovWeatherBruneiMuaraSensorSetupForm,
+
+  GovWeatherTemburongSensorMenu,
+  GovWeatherTemburongGatewaySetup,
+  GovWeatherTemburongGatewwaySetupForm,
+  GovWeatherTemburongSensorSetup,
+  GovWeatherTemburongSensorSetupForm,
+
+  } from "@/pages/dashboard";
 
 
 const icon = {
@@ -408,33 +421,10 @@ export const routesGov = [
   {
     layout: "dashboardGov",
     pages: [
-      {
-        path: "/govweatherTutong",
-        element: <GovWeatherTutong />,
-      },
-      {
-        path: "/govweatherBruneiMuara",
-        element: <GovWeatherBruneiMuara />,
-      },
-      {
-        path: "/govweatherTemburong",
-        element: <GovWeatherTemburong />,
-      },
+      //Weather For Kb ----------------------------------------------------
       {
         path: "/govweatherKBSensorsetupMenu",
         element: <GovWeatherKBSensorMenu />,
-      },
-      {
-        path: "/govweatherTutongSensorsetupMenu",
-        element: <GovWeatherTutongSensorMenu />,
-      },
-      {
-        path: "/govweatherTemburongSensorsetupMenu",
-        element: <GovWeatherTemburongSensorMenu />,
-      },
-      {
-        path: "/govweatherBruneiMuaraSensorsetupMenu",
-        element: <GovWeatherBruneiMuaraSensorMenu />,
       },
       {
         path: "/govweatherKBGatewaySetup",
@@ -444,7 +434,7 @@ export const routesGov = [
         path: "/govweatherKBGatewaySetupForm",
         element: <GovWeatherKBGatewwaySetupForm />,
       },
-{
+      {
         path: "/govweatherKBSensorSetup",
         element: <GovWeatherKBSensorSetup/>,
       },
@@ -452,8 +442,82 @@ export const routesGov = [
         path: "/govweatherKBSensorSetupForm",
         element: <GovWeatherKBSensorSetupForm />,
       },
+      //Weather For Kb ----------------------------------------------------
 
 
+      //Weather For Tutong ----------------------------------------------------
+      {
+        path: "/govweatherTutongSensorsetupMenu",
+        element: <GovWeatherTutongSensorMenu />,
+      },
+      {
+        path: "/govweatherTutongGatewaySetup",
+        element: <GovWeatherTutongGatewaySetup />,
+      },
+      {
+        path: "/govweatherTutongGatewaySetupForm",
+        element: <GovWeatherTutongGatewwaySetupForm />,
+      },
+      {
+        path: "/govweatherTutongSensorSetup",
+        element: <GovWeatherTutongSensorSetup/>,
+      },
+      {
+        path: "/govweatherTutongSensorSetupForm",
+        element: <GovWeatherTutongSensorSetupForm />,
+      },
+      //Weather For Tutong ----------------------------------------------------
+
+
+      //Weather For Temburong ----------------------------------------------------
+      {
+        path: "/govweatherTemburongSensorsetupMenu",
+        element: <GovWeatherTemburongSensorMenu />,
+      },
+      {
+        path: "/govweatherTemburongGatewaySetup",
+        element: <GovWeatherTemburongGatewaySetup />,
+      },
+      {
+        path: "/govweatherTemburongGatewaySetupForm",
+        element: <GovWeatherTemburongGatewwaySetupForm />,
+      },
+      {
+        path: "/govweatherTemburongSensorSetup",
+        element: <GovWeatherTemburongSensorSetup/>,
+      },
+      {
+        path: "/govweatherTemburongSensorSetupForm",
+        element: <GovWeatherTemburongSensorSetupForm />,
+      },
+      //Weather For Temburong ----------------------------------------------------
+
+
+
+
+
+      //Weather For BruneiMuara ----------------------------------------------------
+      {
+        path: "/govweatherBruneiMuaraSensorsetupMenu",
+        element: <GovWeatherBruneiMuaraSensorMenu />,
+      },
+      {
+        path: "/govweatherBruneiMuaraGatewaySetup",
+        element: <GovWeatherBruneiMuaraGatewaySetup />,
+      },
+      {
+        path: "/govweatherBruneiMuaraGatewaySetupForm",
+        element: <GovWeatherBruneiMuaraGatewwaySetupForm />,
+      },
+      {
+        path: "/govweatherBruneiMuaraSensorSetup",
+        element: <GovWeatherBruneiMuaraSensorSetup/>,
+      },
+      {
+        path: "/govweatherBruneiMuaraSensorSetupForm",
+        element: <GovWeatherBruneiMuaraSensorSetupForm />,
+      },
+     //Weather For BruneiMuara ----------------------------------------------------
 
 
 
