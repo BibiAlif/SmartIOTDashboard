@@ -97,16 +97,6 @@ export function GovWeatherKBGatewwaySetupForm() {
               }}
             />
           </div>
-
-
-      
-          <div className="mb-1 flex flex-col gap-6">
-          <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">Upload Image Icons</Typography>
-          <input
-            type="file"
-            className="border-t-blue-gray-200 focus:border-t-gray-900"
-          />
-          </div>
       
           <Button className="mt-6" fullWidth>Save New Sensor</Button>
 

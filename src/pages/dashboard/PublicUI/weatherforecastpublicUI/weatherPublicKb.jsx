@@ -135,7 +135,7 @@ export function WeatherPublicKB() {
         <table className="w-min min-w-[1000px] table-auto mx-auto">
         <thead>
         <tr>
-          {["Days", "Date", "Temperature", "Fahrenheit", "Humidity", "Windy", "Weather", "Alert"].map((el) => (
+          {["Days", "Date", "Barometrict Pressure", "WindDirection", "WindSpeed", "Humidty", "Temperature", "Rainfall", "Alert"].map((el) => (
           <th
             key={el}
             className="border-b border-blue-gray-50 py-3 px-5 text-left"
@@ -153,7 +153,7 @@ export function WeatherPublicKB() {
           <tbody>
 
         {WeatherKb.map(
-          ({ days, dateformat, temperature, fahrenheit, humidity, windy, weather, alert}, key) => {
+          ({ days, dateformat, BarometrictPressure, WindDirection, WindSpeed, Humidty, Temperature, Rainfall, alert}, key) => {
           const className = `py-3 px-5 ${
           key === WeatherKb.length - 1
           ? ""
@@ -187,7 +187,7 @@ export function WeatherPublicKB() {
 
             <td className={className}>
               <Typography className="text-xs font-semibold text-blue-gray-600">
-               {temperature}
+               {BarometrictPressure}
               </Typography>
             </td>
 
@@ -195,7 +195,7 @@ export function WeatherPublicKB() {
 
             <td className={className}>
               <Typography className="text-xs font-semibold text-blue-gray-600">
-               {fahrenheit}
+               {WindDirection}
               </Typography>
             </td>
 
@@ -203,21 +203,27 @@ export function WeatherPublicKB() {
             
             <td className={className}>
               <Typography className="text-xs font-semibold text-blue-gray-600">
-               {humidity}
+               {WindSpeed}
               </Typography>
             </td>
 
 
             <td className={className}>
               <Typography className="text-xs font-semibold text-blue-gray-600">
-               {windy}
+               {Humidty}
               </Typography>
             </td>
 
 
             <td className={className}>
               <Typography className="text-xs font-semibold text-blue-gray-600">
-               {weather}
+               {Temperature}
+              </Typography>
+            </td>
+
+            <td className={className}>
+              <Typography className="text-xs font-semibold text-blue-gray-600">
+               {Rainfall}
               </Typography>
             </td>
 
@@ -230,17 +236,13 @@ export function WeatherPublicKB() {
                 >
                <Chip
                 variant="gradient"
-                color={alert ? "green" : "yellow"}
-                value={alert ? "normal" : "alert"}
+                color={alert ? "green" : "red"}
+                value={alert ? "normal" : "danger"}
                 className="py-0.5 px-2 text-[11px] font-medium w-fit"
                 />
               </Typography>
             </td>
 
-
-
-           
-            
             </tr>
             );
             }

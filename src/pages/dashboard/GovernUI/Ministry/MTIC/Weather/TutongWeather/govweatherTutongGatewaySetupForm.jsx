@@ -38,7 +38,7 @@ export function GovWeatherTutongGatewwaySetupForm() {
 
         <form className="mt-8 mb-2 mx-auto w-70 max-w-screen-lg lg:w-1/2">
 
-          <div className="mb-1 flex flex-col gap-6">
+        <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
               Gateway ID
             </Typography>
@@ -96,16 +96,6 @@ export function GovWeatherTutongGatewwaySetupForm() {
                 className: "before:content-none after:content-none",
               }}
             />
-          </div>
-
-
-      
-          <div className="mb-1 flex flex-col gap-6">
-          <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">Upload Image Icons</Typography>
-          <input
-            type="file"
-            className="border-t-blue-gray-200 focus:border-t-gray-900"
-          />
           </div>
       
           <Button className="mt-6" fullWidth>Save New Sensor</Button>

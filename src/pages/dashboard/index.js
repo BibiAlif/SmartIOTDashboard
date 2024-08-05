@@ -48,6 +48,8 @@ export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TutongWeather/go
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TutongWeather/govweatherTutongGatewaySetupForm";
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TutongWeather/govweatherTutongSensorSetupForm";
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TutongWeather/govweatherTutongSensorSetup";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TutongWeather/govweatherTutongGatewayConnect";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TutongWeather/govweatherTutongSensorConnect";
 //Tutong Weather --------------------------------------------------------------------------------------------------
 
 //Temburong Weather --------------------------------------------------------------------------------------------------
@@ -56,6 +58,8 @@ export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TemburongWeather
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TemburongWeather/govweatherTemburongGatewaySetup";
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TemburongWeather/govweatherTemburongSensorSetup";
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TemburongWeather/govweatherTemburongGatewaySetupForm";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TemburongWeather/govweatherTemburongGatewayConnect";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/TemburongWeather/govweatherTemburongSensorConnect";
 //Temburong Weather --------------------------------------------------------------------------------------------------
 
 
@@ -65,6 +69,8 @@ export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/BruneiMuaraWeath
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/BruneiMuaraWeather/govweatherBruneiMuaraGatewaySetupForm";
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/BruneiMuaraWeather/govweatherBruneiMuaraSensorSetupForm";
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/BruneiMuaraWeather/govweatherBruneiMuaraSensorSetup";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/BruneiMuaraWeather/govweatherBruneiMuaraGatewayConnect";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/BruneiMuaraWeather/govweatherBruneiMuaraSensorConnect";
 //BruneiMuara Weather --------------------------------------------------------------------------------------------------
 
 
@@ -75,6 +81,8 @@ export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/KualaBelaitWeath
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/KualaBelaitWeather/govweatherKBGatewaySetupForm";
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/KualaBelaitWeather/govweatherKBSensorSetup";
 export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/KualaBelaitWeather/govweatherKBSensorSetupForm";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/KualaBelaitWeather/govweatherKBGatewayConnect";
+export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/KualaBelaitWeather/govweatherKBSensorConnect";
 //KB Weather --------------------------------------------------------------------------------------------------
 
 //Smart Parking --------------------------------------------------------------------------------------------

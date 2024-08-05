@@ -38,7 +38,7 @@ export function GovWeatherTutongGatewaySetup() {
     </CardBody>
     <CardFooter className="pt-0">
     <Typography variant="h5" color="blue-gray" className="mb-2">New Gateway Setup</Typography>
-      <Link to="/dashboardGov/govweatherKBGatewaySetupForm"><Button>Add New Gateway</Button></Link>
+      <Link to="/dashboardGov/govweatherTutongGatewaySetupForm"><Button>Add New Gateway</Button></Link>
     </CardFooter>
     </Card>
   {/* Card Will be here -------------------------------------------------------------------------*/}  
@@ -53,8 +53,8 @@ export function GovWeatherTutongGatewaySetup() {
     <i className="fas fa-satellite-dish" style={{ fontSize: '100px', color: 'Black'}}/>
     </CardBody>
     <CardFooter className="pt-0">
-    <Typography variant="h5" color="blue-gray" className="mb-2">Multitech 1</Typography>
-     <Button>Setup Gateway</Button>
+    <Typography variant="h5" color="blue-gray" className="mb-2">UG67 LoRaWAN Gateway</Typography>
+    <Link to="/dashboardGov/govweatherTutongSensorConnect"><Button>Setup Gateway</Button></Link>
     </CardFooter>
   </Card>
   {/* Card Will be here -------------------------------------------------------------------------*/}  

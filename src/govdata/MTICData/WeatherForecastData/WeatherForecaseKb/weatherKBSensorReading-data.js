@@ -1,34 +1,39 @@
 export const WeatherKBSensorReadingdata = [
+
   {
     id: "1333",
-    Fahrenheight: "12F",
-    Temperature: "32C",
-    Humandity: "123ppm",
-    Windy:"20km/h",
-    Weather: "Sunny",
+    BarometrictPressure: "21ppm",
+    WindDirection: "North",
+    WindSpeed: "12/1km",
+    Humidty:"200ppm",
+    Temperature: "32c",
+    Rainfall: "Sunny",
     Alert: true
   },
+
+ 
+  {
+    id: "1333",
+    BarometrictPressure: "21ppm",
+    WindDirection: "North",
+    WindSpeed: "12/1km",
+    Humidty:"200ppm",
+    Temperature: "32c",
+    Rainfall: "Sunny",
+    Alert: true
+  },
+
 
   {
-    id: "1212",
-    Fahrenheight: "12F",
-    Temperature: "32C",
-    Humandity: "123ppm",
-    Windy:"20km/h",
-    Weather: "Sunny",
+    id: "1333",
+    BarometrictPressure: "21ppm",
+    WindDirection: "North",
+    WindSpeed: "12/1km",
+    Humidty:"200ppm",
+    Temperature: "32c",
+    Rainfall: "Sunny",
     Alert: true
   },
-
-    {
-    id: "1111",
-    Fahrenheight: "12F",
-    Temperature: "32C",
-    Humandity: "123ppm",
-    Windy:"20km/h",
-    Weather: "Sunny",
-    Alert: true
-  },
-  
 
 
 

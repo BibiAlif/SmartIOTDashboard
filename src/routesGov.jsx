@@ -28,24 +28,32 @@ import {
   GovWeatherKBGatewwaySetupForm,
   GovWeatherKBSensorSetup,
   GovWeatherKBSensorSetupForm,
+  GovWeatherKBGatewayConnect,
+  GovWeatherKBSensorConnect,
 
   GovWeatherTutongSensorMenu,
   GovWeatherTutongGatewaySetup,
   GovWeatherTutongGatewwaySetupForm,
   GovWeatherTutongSensorSetup,
   GovWeatherTutongSensorSetupForm,
+  GovWeatherTutongGatewayConnect,
+  GovWeatherTutongSensorConnect,
 
   GovWeatherBruneiMuaraSensorMenu,
   GovWeatherBruneiMuaraGatewaySetup,
   GovWeatherBruneiMuaraGatewwaySetupForm,
   GovWeatherBruneiMuaraSensorSetup,
   GovWeatherBruneiMuaraSensorSetupForm,
+  GovWeatherBruneiMuaraGatewayConnect,
+  GovWeatherBruneiMuaraSensorConnect,
 
   GovWeatherTemburongSensorMenu,
   GovWeatherTemburongGatewaySetup,
   GovWeatherTemburongGatewwaySetupForm,
   GovWeatherTemburongSensorSetup,
   GovWeatherTemburongSensorSetupForm,
+  GovWeatherTemburongGatewayConnect,
+  GovWeatherTemburongSensorConnect,
 
   } from "@/pages/dashboard";
 
@@ -442,6 +450,14 @@ export const routesGov = [
         path: "/govweatherKBSensorSetupForm",
         element: <GovWeatherKBSensorSetupForm />,
       },
+      {
+        path: "/govWeatherKBGatewayConnect",
+        element: <GovWeatherKBGatewayConnect />,
+      },
+      {
+        path: "/govWeatherKBSensorConnect",
+        element: <GovWeatherKBSensorConnect />,
+      },
       //Weather For Kb ----------------------------------------------------
 
 
@@ -465,6 +481,14 @@ export const routesGov = [
       {
         path: "/govweatherTutongSensorSetupForm",
         element: <GovWeatherTutongSensorSetupForm />,
+      },
+      {
+        path: "/govWeatherTutongGatewayConnect",
+        element: <GovWeatherTutongGatewayConnect />,
+      },
+      {
+        path: "/govWeatherTutongSensorConnect",
+        element: <GovWeatherTutongSensorConnect />,
       },
       //Weather For Tutong ----------------------------------------------------
 
@@ -490,6 +514,15 @@ export const routesGov = [
         path: "/govweatherTemburongSensorSetupForm",
         element: <GovWeatherTemburongSensorSetupForm />,
       },
+      {
+        path: "/govWeatherTemburongGatewayConnect",
+        element: <GovWeatherTemburongGatewayConnect />,
+      },
+      {
+        path: "/govWeatherTemburongSensorConnect",
+        element: <GovWeatherTemburongSensorConnect />,
+      },
+      
       //Weather For Temburong ----------------------------------------------------
 
 
@@ -516,6 +549,14 @@ export const routesGov = [
       {
         path: "/govweatherBruneiMuaraSensorSetupForm",
         element: <GovWeatherBruneiMuaraSensorSetupForm />,
+      },
+      {
+        path: "/govWeatherBruneiMuaraGatewayConnect",
+        element: <GovWeatherBruneiMuaraGatewayConnect />,
+      },
+      {
+        path: "/govWeatherBruneiMuaraSensorConnect",
+        element: <GovWeatherBruneiMuaraSensorConnect />,
       },
      //Weather For BruneiMuara ----------------------------------------------------
 

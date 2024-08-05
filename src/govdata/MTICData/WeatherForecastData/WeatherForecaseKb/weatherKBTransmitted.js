@@ -4,7 +4,7 @@ export const WeatherKBTransmitted = [
     status: true,
     Speed: "256km",
     connectionType: "EU863",
-    transmitteddata: "190npm",
+    transmitteddata: "190912123",
   },
 
   {
@@ -12,7 +12,7 @@ export const WeatherKBTransmitted = [
     status: true,
     Speed: "256km",
     connectionType: "EU863",
-    transmitteddata: "190npm",
+    transmitteddata: "190912123",
   },
 
   {
@@ -20,7 +20,7 @@ export const WeatherKBTransmitted = [
     status: false,
     Speed: "256km",
     connectionType: "EU863",
-    transmitteddata: "190npm",
+    transmitteddata: "190912123",
   },
 
 ];

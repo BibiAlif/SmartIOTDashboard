@@ -54,7 +54,7 @@ export function GovWeatherTutongSensorSetup() {
     </CardBody>
     <CardFooter className="pt-0">
     <Typography variant="h5" color="blue-gray" className="mb-2">Sensor 1</Typography>
-     <Button>Setup Sensor</Button>
+    <Link to="/dashboardGov/govweatherTutongSensorConnect"><Button>Setup Sensor</Button></Link>
     </CardFooter>
   </Card>
  {/* Card Will be here -------------------------------------------------------------------------*/}  

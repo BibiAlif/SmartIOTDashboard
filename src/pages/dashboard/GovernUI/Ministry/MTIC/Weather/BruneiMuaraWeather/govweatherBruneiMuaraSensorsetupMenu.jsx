@@ -162,8 +162,8 @@ export function GovWeatherBruneiMuaraSensorMenu() {
 
 
 
-{/* Sensor Transmitted Table -------------------------------------------------------------------------*/}  
-  <div className="mt-14 mb-4 flex flex-col gap-6" >
+{/* Sensor  Table -------------------------------------------------------------------------*/}  
+<div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
         <Typography variant="h6" color="white">Sensor 1 Reading At Brunei Muara</Typography>
@@ -175,7 +175,7 @@ export function GovWeatherBruneiMuaraSensorMenu() {
         <table className="w-min min-w-[1000px] table-auto mx-auto">
         <thead>
         <tr>
-          {["Id", "Fahrenheight", "Temperature", "Humandity", "Windy", "Weather", "Alert"].map((el) => (
+          {["Id", "Barometrict Pressure", "Wind Direction", "Wind Speed", "Humidty", "Temperature", "Rainfall", "Alert"].map((el) => (
           <th
             key={el}
             className="border-b border-blue-gray-50 py-3 px-5 text-left"
@@ -193,7 +193,7 @@ export function GovWeatherBruneiMuaraSensorMenu() {
           <tbody>
 
         {WeatherBruneiMuaraSensorReadingdata.map(
-          ({  id, Fahrenheight, Temperature, Humandity, Windy, Weather, Alert,}, key) => {
+          ({  id, BarometrictPressure, WindDirection, WindSpeed, Humidty, Temperature, Rainfall, Alert}, key) => {
           const className = `py-3 px-5 ${
           key === WeatherBruneiMuaraSensorReadingdata.length - 1
           ? ""
@@ -221,7 +221,25 @@ export function GovWeatherBruneiMuaraSensorMenu() {
 
             <td className={className}>
               <Typography className="text-xs font-semibold text-blue-gray-600">
-               {Fahrenheight}
+               {BarometrictPressure}
+              </Typography>
+            </td>
+
+            <td className={className}>
+              <Typography className="text-xs font-semibold text-blue-gray-600">
+               {WindDirection}
+              </Typography>
+            </td>
+
+            <td className={className}>
+              <Typography className="text-xs font-semibold text-blue-gray-600">
+               {WindSpeed}
+              </Typography>
+            </td>
+
+            <td className={className}>
+              <Typography className="text-xs font-semibold text-blue-gray-600">
+               {Humidty}
               </Typography>
             </td>
 
@@ -233,19 +251,7 @@ export function GovWeatherBruneiMuaraSensorMenu() {
 
             <td className={className}>
               <Typography className="text-xs font-semibold text-blue-gray-600">
-               {Humandity}
-              </Typography>
-            </td>
-
-            <td className={className}>
-              <Typography className="text-xs font-semibold text-blue-gray-600">
-               {Windy}
-              </Typography>
-            </td>
-
-            <td className={className}>
-              <Typography className="text-xs font-semibold text-blue-gray-600">
-               {Weather}
+               {Rainfall}
               </Typography>
             </td>
 
@@ -273,7 +279,7 @@ export function GovWeatherBruneiMuaraSensorMenu() {
         </table> 
 </div>
 </div>
-{/* Sensor Transmitted Table -------------------------------------------------------------------------*/}  
+{/* Sensor Table -------------------------------------------------------------------------*/}  
 
 
 
