@@ -10,15 +10,15 @@ import {
   Input,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
-import WeatherKBTransmitted from '../../../../../../../govdata/MTICData/WeatherForecastData/WeatherForecaseKb/weatherKBTransmitted';
+import WeatherKBTransmitted from '../../../../../govdata/MTICData/WeatherForecastData/WeatherForecaseKb/weatherKBTransmitted';
 
-export function GovWeatherKBGatewayConnect() {
+export function SetupGatewayConnect() {
   return (
     
     <div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
-        <Typography variant="h6" color="white">Kuala Belait Gateway Connect</Typography>
+        <Typography variant="h6" color="white">RTU Gateway Connect</Typography>
       </CardHeader>
     </Card>
 
@@ -59,7 +59,7 @@ export function GovWeatherKBGatewayConnect() {
               size="lg"
               className="!border-t-blue-gray-200 focus:!border-t-gray-900"
               readOnly
-              value="UG67 LoRaWAN Gateway"
+              value="RTU Gateway"
               labelProps={{
                 className: "before:content-none after:content-none",
               }}
@@ -74,7 +74,7 @@ export function GovWeatherKBGatewayConnect() {
             <Input
               size="lg"
               readOnly
-              value="Weather Gateway"
+              value="RTU for LPG Gateway"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
                 className: "before:content-none after:content-none",
@@ -90,7 +90,7 @@ export function GovWeatherKBGatewayConnect() {
             <Input
               size="lg"
               readOnly
-              value="Gateway For Weather Forecast"
+              value="Gateway For LPG Gas"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
                 className: "before:content-none after:content-none",
@@ -132,7 +132,7 @@ export function GovWeatherKBGatewayConnect() {
 
           <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
-              Appllication Key
+              Application Key
             </Typography>
             <Input
               size="lg"
@@ -165,7 +165,7 @@ export function GovWeatherKBGatewayConnect() {
 <div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
-        <Typography variant="h6" color="white">UG67 LoRaWAN Gateway Data Transmitted At Kuala Belait</Typography>
+        <Typography variant="h6" color="white">RTU Gateway Data Transmitted</Typography>
       </CardHeader>
       </Card>
        
@@ -274,4 +274,4 @@ export function GovWeatherKBGatewayConnect() {
   );
 }
 
-export default GovWeatherKBGatewayConnect;
+export default SetupGatewayConnect;

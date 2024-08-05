@@ -30,6 +30,8 @@ export * from "@/pages/dashboard/PublicUI/housingUI/sideBarNavigation/GatewaySet
 export * from "@/pages/dashboard/PublicUI/housingUI/sideBarNavigation/AddNewGateway";
 
 export * from "@/pages/dashboard/PublicUI/housingUI/LPGGASDashboard/LPGGasDashboard";
+export * from "@/pages/dashboard/PublicUI/housingUI/LPGGASDashboard/OrderLPGForm";
+export * from "@/pages/dashboard/PublicUI/housingUI/sideBarNavigation/SetupGatewayConnect";
 //For Housing ----------------------------------------------------------------------------
 
 

@@ -6,7 +6,9 @@ import {
   CardBody,
   Typography,
   Chip,
+  Button
 } from "@material-tailwind/react";
+import { Link } from 'react-router-dom';
 
 
 //import { KitchenTableData, HallTableData, ToiletTableData, OutdoorTableData } from "@/housedata";
@@ -34,8 +36,16 @@ export function LPGGasDashboard() {
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
         <Typography variant="h6" color="white">LPG Gas Dashboard</Typography>
       </CardHeader>
-      <CardBody>
 
+
+      <div className="p-6">
+      <Link to="/dashboard/OrderLPGForm">
+        <Button className="w-full md:w-40 mb-4">Order LPG Gas</Button>
+      </Link>
+      </div>
+
+
+    <CardBody>
 
         <div className="overflow-x-scroll">
         <table className="w-min min-w-[1000px] table-auto mx-auto">

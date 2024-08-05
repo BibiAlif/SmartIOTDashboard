@@ -9,14 +9,14 @@ import {
 
 
 
-export function AddnewGateway() {
+export function OrderLPGForm() {
   return (
     <section className="m-8 flex">
            
       <div className="w-full lg:w-3/5 flex flex-col items-center justify-center">
         <div className="text-center">
-          <Typography variant="h2" className="font-bold mb-4">Add New Gateway To Setup</Typography>
-          <Typography variant="paragraph" color="blue-gray" className="text-lg font-normal">Enter Gateway Information.</Typography>
+          <Typography variant="h2" className="font-bold mb-4">Order LPG Gas</Typography>
+          <Typography variant="paragraph" color="blue-gray" className="text-lg font-normal">Please check your detail</Typography>
         </div>
 
         <Card className="w-full md:col-span-2 mx-auto"  style={{ backgroundColor: '#EEEEEE' }}>
@@ -25,13 +25,13 @@ export function AddnewGateway() {
 
         <form className="mt-8 mb-2 mx-auto w-70 max-w-screen-lg lg:w-1/2">
 
-          <div className="mb-1 flex flex-col gap-6">
+        <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
-              Gateway ID
+              Your Email
             </Typography>
             <Input
               size="lg"
-              placeholder="name@mail.com"
+              placeholder="Display Email"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
                 className: "before:content-none after:content-none",
@@ -39,15 +39,13 @@ export function AddnewGateway() {
             />
           </div>
 
-
-
           <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
-              Gateway Name
+              Username
             </Typography>
             <Input
               size="lg"
-              placeholder="Password"
+              placeholder="Display Username"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
                 className: "before:content-none after:content-none",
@@ -55,14 +53,13 @@ export function AddnewGateway() {
             />
           </div>
 
-
           <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
-              Types Of Gateway
+              Ship To
             </Typography>
             <Input
               size="lg"
-              placeholder="Address"
+              placeholder="Display Address"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
                 className: "before:content-none after:content-none",
@@ -70,14 +67,13 @@ export function AddnewGateway() {
             />
           </div>
 
-
           <div className="mb-1 flex flex-col gap-6">
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
-              Gateway other detail
+              Phone Number
             </Typography>
             <Input
               size="lg"
-              placeholder="Address"
+              placeholder="Display Phone Number"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
                 className: "before:content-none after:content-none",
@@ -85,7 +81,7 @@ export function AddnewGateway() {
             />
           </div>
       
-          <Button className="mt-6" fullWidth>Save New Sensor</Button>
+          <Button className="mt-6" fullWidth>Order Now</Button>
 
         </form>
 
@@ -97,5 +93,5 @@ export function AddnewGateway() {
   );
 }
 
-export default AddnewGateway;
+export default OrderLPGForm;
 

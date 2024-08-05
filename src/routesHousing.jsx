@@ -20,6 +20,8 @@ import { Home,
          GatewaySetup,
          AddnewGateway,
          HomePublicMenu,
+         OrderLPGForm,
+         SetupGatewayConnect,
          } from "@/pages/dashboard";
 
 
@@ -150,6 +152,14 @@ export const routesHouse = [
       {
         path: "/AddNewGateway",
         element: <AddnewGateway />,
+      },
+      {
+        path: "/OrderLPGForm",
+        element: <OrderLPGForm />,
+      },
+      {
+        path: "/SetupGatewayConnect",
+        element: <SetupGatewayConnect />,
       },
     ],
 
