@@ -6,13 +6,13 @@ export const SmartparkingTable = [
     weather:"Sunny",
     temperature:"32c",
     condition: "CCTV",
-    cctvlink: "GovSmartParkingRipasCCTV",
+    cctvlink: "PublicSmartParkingRipasCCTV",
     totalParking: "100",
     parkingAvailable: "10",
     status: true,
     bookParking: "Book",
-    PageLink:"govSmartParkingRipas",
-    booklink:"govSmartParkingRipasBook"
+    PageLink:"PublicSmartParkingRipas",
+    booklink:"PublicSmartParkingRipasBook"
   },
   {
     area: "Airport Mall",
@@ -20,13 +20,13 @@ export const SmartparkingTable = [
     weather:"Sunny",
     temperature:"32c",
     condition: "CCTV",
-    cctvlink: "GovSmartParkingAirportMallCCTV",
+    cctvlink: "PublicSmartParkingAirportMallCCTV",
     totalParking: "200",
     parkingAvailable: "0",
     status: false,
     bookParking: "Book",
-    PageLink:"govSmartParkingAirportMall",
-    booklink:"govSmartParkingAirportMallBook"
+    PageLink:"PublicSmartParkingAirportMall",
+    booklink:"PublicSmartParkingAirportMallBook"
   },
   {
     area: "Jaya Setia",
@@ -34,13 +34,13 @@ export const SmartparkingTable = [
     weather:"Sunny",
     temperature:"32c",
     condition: "CCTV",
-    cctvlink: "GovSmartParkingJayaSetiaCCTV",
+    cctvlink: "PublicSmartParkingJayaSetiaCCTV",
     totalParking: "300",
     parkingAvailable: "30",
     status: true,
     bookParking: "Book",
-    PageLink:"govSmartParkingJayaSetia",
-    booklink:"govSmartParkingJayaSetiaBook"
+    PageLink:"PublicSmartParkingJayaSetia",
+    booklink:"PublicSmartParkingJayaSetiaBook"
   },
 ];
 

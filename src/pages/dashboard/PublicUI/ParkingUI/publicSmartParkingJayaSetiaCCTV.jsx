@@ -11,15 +11,15 @@ import {
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
 import { SmartparkingTable } from "@/govdata/MTICData/LandTransportData/SmartParkingData/smartparking-table-data";
-import SmartParkingRipas from '../../../../../../../govdata/MTICData/LandTransportData/SmartParkingData/smartparking-Ripas-data';
+import SmartParkingRipas from '../../../../govdata/MTICData/LandTransportData/SmartParkingData/smartparking-Ripas-data';
 
-export function GovSmartParkingAirportMallCCTV() {
+export function PublicSmartParkingJayaSetiaCCTV() {
   return (
     
     <div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
-        <Typography variant="h6" color="white">Parking Hospital Ripas</Typography>
+        <Typography variant="h6" color="white">Parking Jaya Setia</Typography>
       </CardHeader>
     </Card>
 
@@ -37,7 +37,7 @@ export function GovSmartParkingAirportMallCCTV() {
     </CardBody>
 
       <div className="flex flex-col justify-center items-center mt-2 space-x-1">
-        <Link to="/dashboardGov/govSmartParkingRipas"><Button className="w-full md:w-40 mb-4">Smart Parking</Button></Link>
+        <Link to="/dashboardPublic/PublicSmartParkingRipas"><Button className="w-full md:w-40 mb-4">Smart Parking</Button></Link>
         <Link to=""><Button className="w-full md:w-40 mb-4">Traffic Jam Area</Button></Link>
         <Link to=""><Button className="w-full md:w-40 mb-4">Road Safety Complain</Button></Link>
         <Link to=""><Button className="w-full md:w-40 mb-4">JPD Que Up</Button></Link>
@@ -126,7 +126,7 @@ export function GovSmartParkingAirportMallCCTV() {
   <div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
-        <Typography variant="h6" color="white">Parking Airport Mall AI CCTV</Typography>
+        <Typography variant="h6" color="white">Parking Jaya Setia AI CCTV</Typography>
       </CardHeader>
 
     
@@ -143,7 +143,7 @@ export function GovSmartParkingAirportMallCCTV() {
         ></iframe>
       </CardBody>
 
-      <Link to="/dashboardGov/govSmartParkingAirportMall"><Button className="w-full md:w-40 mb-4">Back</Button></Link>
+      <Link to="/dashboardPublic/PublicSmartParkingJayaSetia"><Button className="w-full md:w-40 mb-4">Back</Button></Link>
     
     </Card>
   
@@ -158,4 +158,4 @@ export function GovSmartParkingAirportMallCCTV() {
   );
 }
 
-export default GovSmartParkingAirportMallCCTV;
+export default PublicSmartParkingJayaSetiaCCTV;

@@ -12,10 +12,10 @@ import {
   ListItem,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
-import SmartParkingRipas from '../../../../../../../govdata/MTICData/LandTransportData/SmartParkingData/smartparking-Ripas-data';
+import SmartParkingRipas from '../../../../govdata/MTICData/LandTransportData/SmartParkingData/smartparking-Ripas-data';
 
 
-export function GovSmartParkingAirportMallBook() {
+export function PublicSmartParkingJayaSetiaBook() {
 
 
   const [showDropdown, setShowDropdown] = useState(false);
@@ -50,7 +50,7 @@ export function GovSmartParkingAirportMallBook() {
     <div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
-        <Typography variant="h6" color="white">Parking AirportMall</Typography>
+        <Typography variant="h6" color="white">Parking Jaya Setia</Typography>
       </CardHeader>
     </Card>
 
@@ -68,7 +68,7 @@ export function GovSmartParkingAirportMallBook() {
     </CardBody>
 
       <div className="flex flex-col justify-center items-center mt-2 space-x-1">
-        <Link to="/dashboardGov/govSmartParkingRipas"><Button className="w-full md:w-40 mb-4">Smart Parking</Button></Link>
+        <Link to="/dashboardPublic/PublicSmartParkingRipas"><Button className="w-full md:w-40 mb-4">Smart Parking</Button></Link>
         <Link to=""><Button className="w-full md:w-40 mb-4">Traffic Jam Area</Button></Link>
         <Link to=""><Button className="w-full md:w-40 mb-4">Road Safety Complain</Button></Link>
         <Link to=""><Button className="w-full md:w-40 mb-4">JPD Que Up</Button></Link>
@@ -157,7 +157,7 @@ export function GovSmartParkingAirportMallBook() {
   <div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
-        <Typography variant="h6" color="white">Parking AirportMall Book</Typography>
+        <Typography variant="h6" color="white">Parking Jaya Setia Book</Typography>
       </CardHeader>
 
     
@@ -228,7 +228,7 @@ export function GovSmartParkingAirportMallBook() {
 
         <div className="flex space-x-4">
         <Button className="w-full md:w-40 mb-4">Submit</Button>
-          <Link to="/dashboardGov/govSmartParkingAirportMall">
+          <Link to="/dashboardPublic/PublicSmartParkingAirportMall">
             <Button className="w-full md:w-40 mb-4">Back</Button>
           </Link>
         </div>
@@ -252,4 +252,4 @@ export function GovSmartParkingAirportMallBook() {
   );
 }
 
-export default GovSmartParkingAirportMallBook;
+export default PublicSmartParkingJayaSetiaBook;

@@ -10,7 +10,7 @@ import {
   CardHeader,
   Chip,
 } from "@material-tailwind/react";
-import WeatherKBTransmitted from '../../../../../govdata/MTICData/WeatherForecastData/WeatherForecaseKb/weatherKBTransmitted';
+import RTUTableGatewaydatatransmited from '../../../../../housedata/All-Housing-Table-Data/RTU-Gateway-table-transmitted';
 
 
 
@@ -58,7 +58,7 @@ export function GatewaySetup() {
 <div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
-        <Typography variant="h6" color="white">RTU Gateway Data Transmitted At Kuala Belait</Typography>
+        <Typography variant="h6" color="white">RTU Gateway Data Transmitted</Typography>
       </CardHeader>
       </Card>
        
@@ -84,10 +84,10 @@ export function GatewaySetup() {
           </thead>
           <tbody>
 
-        {WeatherKBTransmitted.map(
+        {RTUTableGatewaydatatransmited.map(
           ({  id, status, Speed, connectionType, transmitteddata}, key) => {
           const className = `py-3 px-5 ${
-          key === WeatherKBTransmitted.length - 1
+          key === RTUTableGatewaydatatransmited.length - 1
           ? ""
           : "border-b border-blue-gray-50"
           }`;

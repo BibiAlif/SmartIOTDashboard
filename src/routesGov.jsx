@@ -13,15 +13,6 @@ import {
   GovSetting,
   GovLogout,
   GovWeatherKB,
-  GovSmartParkingRipas,
-  GovSmartParkingAirportMall,
-  GovSmartParkingJayaSetia,
-  GovSmartParkingRipasCCTV,
-  GovSmartParkingAirportMallCCTV,
-  GovSmartParkingJayaSetiaCCTV,
-  GovSmartParkingRipasBook,
-  GovSmartParkingAirportMallBook,
-  GovSmartParkingJayaSetiaBook,
 
   GovWeatherKBSensorMenu,
   GovWeatherKBGatewaySetup,
@@ -115,8 +106,8 @@ export const routesGov = [
           {
             icon: < TruckIcon {...icon} />,
             name: "Land Transport Department",
-            path: "govSmartParkingRipas",
-            element: <GovSmartParkingRipas />,
+            path: "govhome",
+            element: <GovHome />,
           },
           {
             icon: <InboxIcon {...icon} />,
@@ -559,47 +550,6 @@ export const routesGov = [
         element: <GovWeatherBruneiMuaraSensorConnect />,
       },
      //Weather For BruneiMuara ----------------------------------------------------
-
-
-
-
-
-
-
-
-
-      {
-        path: "/govSmartParkingAirportMall",
-        element: <GovSmartParkingAirportMall />,
-      },
-      {
-        path: "/govSmartParkingJayaSetia",
-        element: <GovSmartParkingJayaSetia />,
-      },
-      {
-        path: "/govSmartParkingRipasCCTV",
-        element: <GovSmartParkingRipasCCTV />,
-      },
-      {
-        path: "/govSmartParkingAirportMallCCTV",
-        element: <GovSmartParkingAirportMallCCTV />,
-      },
-      {
-        path: "/govSmartParkingJayaSetiaCCTV",
-        element: <GovSmartParkingJayaSetiaCCTV />,
-      },
-      {
-        path: "/govSmartParkingRipasBook",
-        element: <GovSmartParkingRipasBook />,
-      },
-      {
-        path: "/govSmartParkingAirportMallBook",
-        element: <GovSmartParkingAirportMallBook />,
-      },
-      {
-        path: "/govSmartParkingJayaSetiaBook",
-        element: <GovSmartParkingJayaSetiaBook />,
-      },
 
     ],
   },

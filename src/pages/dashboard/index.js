@@ -88,17 +88,17 @@ export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/Weather/KualaBelaitWeath
 //KB Weather --------------------------------------------------------------------------------------------------
 
 //Smart Parking --------------------------------------------------------------------------------------------
-export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingRipas";
-export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingAirportMall";
-export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingJayaSetia";
+export * from "@/pages/dashboard/PublicUI/ParkingUI/publicSmartParkingRipas";
+export * from "@/pages/dashboard/PublicUI/ParkingUI/publicSmartParkingAirportMall";
+export * from "@/pages/dashboard/PublicUI/ParkingUI/publicSmartParkingJayaSetia";
 
-export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingRipasCCTV";
-export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingAirportMallCCTV";
-export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingJayaSetiaCCTV";
+export * from "@/pages/dashboard/PublicUI/ParkingUI/publicSmartParkingRipasCCTV";
+export * from "@/pages/dashboard/PublicUI/ParkingUI/publicSmartParkingAirportMallCCTV";
+export * from "@/pages/dashboard/PublicUI/ParkingUI/publicSmartParkingJayaSetiaCCTV";
 
-export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingRipasBook";
-export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingAirportMallBook";
-export * from "@/pages/dashboard/GovernUI/Ministry/MTIC/LandTransport/SmartParkingUI/govSmartParkingJayaSetiaBook";
+export * from "@/pages/dashboard/PublicUI/ParkingUI/publicSmartParkingRipasBook";
+export * from "@/pages/dashboard/PublicUI/ParkingUI/publicSmartParkingAirportMallBook";
+export * from "@/pages/dashboard/PublicUI/ParkingUI/publicSmartParkingJayaSetiaBook";
 //Smart Parking --------------------------------------------------------------------------------------------
 
 //For MTIC ---------------------------------------------------------------------------------

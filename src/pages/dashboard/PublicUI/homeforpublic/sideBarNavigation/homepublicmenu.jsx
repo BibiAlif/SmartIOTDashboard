@@ -58,7 +58,7 @@ export function HomePublicMenu() {
 
 
 <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 ">
-<Link to="/dashboard/home">
+<Link to="/dashboardPublic/PublicSmartParkingRipas">
   <Card className="mt-6 w-30 h-55 text-center justify-center items-center">
     <CardBody>
     <i className="fas fa-car-side fa-5x mt-4" style={{ color: 'black', width: '100%', height: 'auto' }}></i>

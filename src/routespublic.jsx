@@ -13,6 +13,21 @@ import {
   WeatherPublicTemburong,
   Setting, 
   PublicLogout,
+
+  PublicSmartParkingRipas,
+  PublicSmartParkingRipasCCTV,
+  PublicSmartParkingRipasBook,
+
+  PublicSmartParkingAirportMall,
+  PublicSmartParkingAirportMallCCTV,
+  PublicSmartParkingAirportMallBook,
+
+  PublicSmartParkingJayaSetia,
+  PublicSmartParkingJayaSetiaCCTV,
+  PublicSmartParkingJayaSetiaBook,
+
+  
+  
          } from "@/pages/dashboard";
 
 
@@ -22,6 +37,7 @@ const icon = {
 
 
 export const routespublic = [
+
   {
     layout: "dashboardPublic",
     pages: [
@@ -68,6 +84,72 @@ export const routespublic = [
         element: <WeatherPublicTemburong />,
       },
 
+
+      // Smart Parking --------------------------------------------------------------------
+      {
+        //icon: <HomeIcon {...icon} />,
+        // name: "",
+        path: "/publicSmartParkingRipas",
+        element: <PublicSmartParkingRipas />,
+      },
+
+      {
+        //icon: <HomeIcon {...icon} />,
+        // name: "",
+        path: "/publicSmartParkingRipasCCTV",
+        element: <PublicSmartParkingRipasCCTV />,
+      },
+
+      {
+        //icon: <HomeIcon {...icon} />,
+        // name: "",
+        path: "/publicSmartParkingRipasBook",
+        element: <PublicSmartParkingRipasBook />,
+      },
+
+      {
+        //icon: <HomeIcon {...icon} />,
+        // name: "",
+        path: "/publicSmartParkingAirportMall",
+        element: <PublicSmartParkingAirportMall />,
+      },
+
+      {
+        //icon: <HomeIcon {...icon} />,
+        // name: "",
+        path: "/publicSmartParkingAirportMallCCTV",
+        element: <PublicSmartParkingAirportMallCCTV />,
+      },
+
+      {
+        //icon: <HomeIcon {...icon} />,
+        // name: "",
+        path: "/publicSmartParkingAirportMallBook",
+        element: <PublicSmartParkingAirportMallBook />,
+      },
+
+      {
+        //icon: <HomeIcon {...icon} />,
+        // name: "",
+        path: "/publicSmartParkingJayaSetia",
+        element: <PublicSmartParkingJayaSetia />,
+      },
+
+      {
+        //icon: <HomeIcon {...icon} />,
+        // name: "",
+        path: "/publicSmartParkingAirportMallCCTV",
+        element: <PublicSmartParkingJayaSetiaCCTV />,
+      },
+
+      {
+        //icon: <HomeIcon {...icon} />,
+        // name: "",
+        path: "/publicSmartParkingAirportMallBook",
+        element: <PublicSmartParkingJayaSetiaBook />,
+      },
+
+      // Smart Parking --------------------------------------------------------------------
     ],
   },
 ]

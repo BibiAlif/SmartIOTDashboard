@@ -11,15 +11,15 @@ import {
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
 import { SmartparkingTable } from "@/govdata/MTICData/LandTransportData/SmartParkingData/smartparking-table-data";
-import smartparkingAirportMall from '../../../../../../../govdata/MTICData/LandTransportData/SmartParkingData/smartparking-AirportMall-data';
+import SmartParkingRipas from '../../../../govdata/MTICData/LandTransportData/SmartParkingData/smartparking-Ripas-data';
 
-export function GovSmartParkingAirportMall() {
+export function PublicSmartParkingAirportMallCCTV() {
   return (
     
     <div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
-        <Typography variant="h6" color="white">Parking Airport Mall</Typography>
+        <Typography variant="h6" color="white">Parking Hospital Ripas</Typography>
       </CardHeader>
     </Card>
 
@@ -29,7 +29,7 @@ export function GovSmartParkingAirportMall() {
 
 {/* 2 Card header -------------------------------------------------------------------------*/}  
 
-<div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4 p-2">
+<div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 p-2">
   <Card className="h-auto text-center">
 
     <CardBody>
@@ -37,8 +37,9 @@ export function GovSmartParkingAirportMall() {
     </CardBody>
 
       <div className="flex flex-col justify-center items-center mt-2 space-x-1">
-        <Link to="/dashboardGov/govSmartParkingRipas"><Button className="w-full md:w-40 mb-4">Smart Parking</Button></Link>
+        <Link to="/dashboardPublic/PublicSmartParkingRipas"><Button className="w-full md:w-40 mb-4">Smart Parking</Button></Link>
         <Link to=""><Button className="w-full md:w-40 mb-4">Traffic Jam Area</Button></Link>
+        <Link to=""><Button className="w-full md:w-40 mb-4">Road Safety Complain</Button></Link>
         <Link to=""><Button className="w-full md:w-40 mb-4">JPD Que Up</Button></Link>
       </div>
 
@@ -46,8 +47,8 @@ export function GovSmartParkingAirportMall() {
 </div>
 
 
-      {smartparkingAirportMall.map((parkingdata, index) => (
-        <div key={index} className="">
+      {SmartParkingRipas.map((parkingdata, index) => (
+        <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
           <Card className="h-96 text-center justify-center items-center">
             <div className="mt-4"> {/* Adding margin-top for space */}
               <Typography variant="h5" color="blue-gray" className="mb-2">Location</Typography>
@@ -82,7 +83,7 @@ export function GovSmartParkingAirportMall() {
       ))}
 
 
-{smartparkingAirportMall.map((parkingdata, index) => (
+{SmartParkingRipas.map((parkingdata, index) => (
 <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 ">
   <Card className="h-96 text-center justify-center items-center">
     <div className="mt-4"> {/* Adding margin-top for space */}
@@ -102,7 +103,7 @@ export function GovSmartParkingAirportMall() {
 
 
 
-{smartparkingAirportMall.map((parkingdata, index) => (
+{SmartParkingRipas.map((parkingdata, index) => (
 <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 ">
   <Card className="h-96 text-center justify-center items-center">
     <div className="mt-4"> {/* Adding margin-top for space */}
@@ -125,122 +126,28 @@ export function GovSmartParkingAirportMall() {
   <div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
-        <Typography variant="h6" color="white">Parking Area</Typography>
+        <Typography variant="h6" color="white">Parking Airport Mall AI CCTV</Typography>
       </CardHeader>
 
-      <div className="overflow-x-scroll">
-        <table className="w-min min-w-[1000px] table-auto mx-auto">
-        <thead>
-        <tr>
-          {["Area", "Date", "Weather", "Temperature", "Total Parking", "Parking Available", "Status", "Condition", "Book Parking"].map((el) => (
-          <th
-            key={el}
-            className="border-b border-blue-gray-50 py-3 px-5 text-left"
-          >
-          <Typography
-            variant="small"
-            className="text-[11px] font-bold uppercase text-blue-gray-400"
-            >
-          {el}
-          </Typography>
-          </th>
-          ))}
-          </tr>
-          </thead>
-          <tbody>
+    
+      <CardBody className="flex justify-center">
+        <iframe 
+          width="90%" 
+          height="500" 
+          src="https://www.youtube.com/embed/mggV_VomHUo?si=QkGPlEFHYTuMdrc0" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen
+        ></iframe>
+      </CardBody>
 
-        {SmartparkingTable.map(
-          ({ area, date, weather, temperature, totalParking, parkingAvailable, status, condition, bookParking, PageLink, cctvlink, booklink}, key) => {
-          const className = `py-3 px-5 ${
-          key === SmartparkingTable.length - 1
-          ? ""
-          : "border-b border-blue-gray-50"
-          }`;
-
-
-          return (
-            <tr key={area}>
-            <td className={className}>
-            <div className="flex items-center gap-4">
-
-            <div>
-            <Link to={`/dashboardGov/${PageLink}`}><Button className="w-sm md:w-40">{area}</Button></Link>
-            </div>
-            </div>
-            </td>
-
-            <td className={className}>
-              <Typography className="text-xs font-semibold text-blue-gray-600">
-               {date}
-              </Typography>
-            </td>
-
-            <td className={className}>
-              <Typography className="text-xs font-semibold text-blue-gray-600">
-               {weather}
-              </Typography>
-            </td>
-
-          
-            
-            <td className={className}>
-              <Typography className="text-xs font-semibold text-blue-gray-600">
-               {temperature}
-              </Typography>
-            </td>
-
-            <td className={className}>
-              <Typography className="text-xs font-semibold text-blue-gray-600">
-               {totalParking}
-              </Typography>
-            </td>
-
-            <td className={className}>
-              <Typography className="text-xs font-semibold text-blue-gray-600">
-               {parkingAvailable}
-              </Typography>
-            </td>
-
-            <td className={className}>
-              <Typography
-                as="a"
-                href="#"
-                className="text-xs font-semibold text-blue-gray-600"
-                >
-               <Chip
-                variant="gradient"
-                color={status ? "green" : "red"}
-                value={status ? "normal" : "full"}
-                className="py-0.5 px-2 text-[11px] font-medium w-fit"
-                />
-              </Typography>
-            </td>
-
-            <td className={className}>
-            <Link to={`/dashboardGov/${cctvlink}`}><Button className="w-sm md:w-40">{condition}</Button></Link>
-            </td>
-
-            <td className={className}>
-              <Link to={`/dashboardGov/${booklink}`}><Button className="w-sm md:w-40">{bookParking}</Button></Link>
-            </td>
-
-
-
-
-
-
-           
-            
-            </tr>
-            );
-            }
-            )}
-        </tbody>
-        </table> 
- </div>
+      <Link to="/dashboardPublic/PublicSmartParkingAirportMall"><Button className="w-full md:w-40 mb-4">Back</Button></Link>
+    
     </Card>
   
-</div>
+  </div>
 
   {/* Smart Parking Area Table -------------------------------------------------------------------------*/}  
 
@@ -251,4 +158,4 @@ export function GovSmartParkingAirportMall() {
   );
 }
 
-export default GovSmartParkingAirportMall;
+export default PublicSmartParkingAirportMallCCTV;

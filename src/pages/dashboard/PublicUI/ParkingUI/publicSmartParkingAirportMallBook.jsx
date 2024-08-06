@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useState } from "react";
 import {
   Card,
   CardHeader,
@@ -8,18 +7,50 @@ import {
   CardFooter,
   Button,
   Chip,
+  Input,
+  List, 
+  ListItem,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
-import { SmartparkingTable } from "@/govdata/MTICData/LandTransportData/SmartParkingData/smartparking-table-data";
-import SmartParkingRipas from '../../../../../../../govdata/MTICData/LandTransportData/SmartParkingData/smartparking-Ripas-data';
+import SmartParkingRipas from '../../../../govdata/MTICData/LandTransportData/SmartParkingData/smartparking-Ripas-data';
 
-export function GovSmartParkingRipasCCTV() {
+
+export function PublicSmartParkingAirportMallBook() {
+
+
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const [selectedItem, setSelectedItem] = useState("");
+
+ const handleFocus = () => {
+    setShowDropdown(true);
+  };
+
+  const handleBlur = () => {
+    setTimeout(() => setShowDropdown(false), 200);
+  };
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleItemClick = (item) => {
+    setInputValue(item);
+    setSelectedItem(item);
+    setShowDropdown(false);
+  };
+
+
+  const items = ["A1", "A2", "A3", "A4"];
+
+
+
   return (
     
     <div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
-        <Typography variant="h6" color="white">Parking Hospital Ripas</Typography>
+        <Typography variant="h6" color="white">Parking AirportMall</Typography>
       </CardHeader>
     </Card>
 
@@ -37,7 +68,7 @@ export function GovSmartParkingRipasCCTV() {
     </CardBody>
 
       <div className="flex flex-col justify-center items-center mt-2 space-x-1">
-        <Link to="/dashboardGov/govSmartParkingRipas"><Button className="w-full md:w-40 mb-4">Smart Parking</Button></Link>
+        <Link to="/dashboardPublic/PublicSmartParkingRipas"><Button className="w-full md:w-40 mb-4">Smart Parking</Button></Link>
         <Link to=""><Button className="w-full md:w-40 mb-4">Traffic Jam Area</Button></Link>
         <Link to=""><Button className="w-full md:w-40 mb-4">Road Safety Complain</Button></Link>
         <Link to=""><Button className="w-full md:w-40 mb-4">JPD Que Up</Button></Link>
@@ -126,12 +157,12 @@ export function GovSmartParkingRipasCCTV() {
   <div className="mt-14 mb-4 flex flex-col gap-6" >
     <Card>
       <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
-        <Typography variant="h6" color="white">Parking Hospital Ripas AI CCTV</Typography>
+        <Typography variant="h6" color="white">Parking AirportMall Book</Typography>
       </CardHeader>
 
     
       <CardBody className="flex justify-center">
-        <iframe 
+      <iframe 
           width="90%" 
           height="500" 
           src="https://www.youtube.com/embed/mggV_VomHUo?si=QkGPlEFHYTuMdrc0" 
@@ -143,8 +174,71 @@ export function GovSmartParkingRipasCCTV() {
         ></iframe>
       </CardBody>
 
-      <Link to="/dashboardGov/govSmartParkingRipas"><Button className="w-full md:w-40 mb-4">Back</Button></Link>
+      <form className="mt-8 mb-2 mx-auto w-80 max-w-screen-lg lg:w-1/2">
+          <div className="mb-1 flex flex-col gap-6">
+            <Typography
+              variant="small"
+              color="blue-gray"
+              className="-mb-3 font-medium"
+            >
+              License Number
+            </Typography>
+            <Input
+              size="lg"
+              placeholder="License Number"
+              className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+              labelProps={{
+                className: "before:content-none after:content-none",
+              }}
+            />
+
+            <Typography
+              variant="small"
+              color="blue-gray"
+              className="-mb-3 font-medium"
+            >
+              Parking Available
+            </Typography>
+            <Input
+              size="lg"
+              placeholder="Select an item"
+              value={inputValue}
+              onChange={handleInputChange}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+              className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+              labelProps={{
+                className: "before:content-none after:content-none",
+              }}
+            />
+            {showDropdown && (
+              <List className="mb-1 flex flex-col gap-6">
+                {items.map((item, index) => (
+                  <ListItem
+                    key={index}
+                    onClick={() => handleItemClick(item)}
+                    className="cursor-pointer"
+                  >
+                    {item}
+                  </ListItem>
+                ))}
+              </List>
+            )}
+
+
+        <div className="flex space-x-4">
+        <Button className="w-full md:w-40 mb-4">Submit</Button>
+          <Link to="/dashboardPublic/PublicSmartParkingAirportMall">
+            <Button className="w-full md:w-40 mb-4">Back</Button>
+          </Link>
+        </div>
+
+
+          </div>
+      </form>
     
+      
+
     </Card>
   
   </div>
@@ -158,4 +252,4 @@ export function GovSmartParkingRipasCCTV() {
   );
 }
 
-export default GovSmartParkingRipasCCTV;
+export default PublicSmartParkingAirportMallBook;

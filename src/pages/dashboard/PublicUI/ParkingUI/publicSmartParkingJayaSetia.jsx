@@ -11,9 +11,9 @@ import {
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
 import { SmartparkingTable } from "@/govdata/MTICData/LandTransportData/SmartParkingData/smartparking-table-data";
-import smartparkingJayaSetia from '../../../../../../../govdata/MTICData/LandTransportData/SmartParkingData/smartparking-JayaSetia-data';
+import smartparkingJayaSetia from '../../../../govdata/MTICData/LandTransportData/SmartParkingData/smartparking-JayaSetia-data';
 
-export function GovSmartParkingJayaSetia() {
+export function PublicSmartParkingJayaSetia() {
   return (
     
     <div className="mt-14 mb-4 flex flex-col gap-6" >
@@ -37,10 +37,9 @@ export function GovSmartParkingJayaSetia() {
     </CardBody>
 
       <div className="flex flex-col justify-center items-center mt-2 space-x-1">
-        <Link to="/dashboardGov/govSmartParkingRipas"><Button className="w-full md:w-40 mb-4">Smart Parking</Button></Link>
+        <Link to="/dashboardPublic/PublicSmartParkingRipas"><Button className="w-full md:w-40 mb-4">Smart Parking</Button></Link>
         <Link to=""><Button className="w-full md:w-40 mb-4">Traffic Jam Area</Button></Link>
-        <Link to=""><Button className="w-full md:w-40 mb-4">Road Safety Complain</Button></Link>
-        <Link to=""><Button className="w-full md:w-40 mb-4">JPD Que Up</Button></Link>
+        <Link to=""><Button className="w-full md:w-40 mb-4">Bus Tracker</Button></Link>
       </div>
 
   </Card>
@@ -165,7 +164,7 @@ export function GovSmartParkingJayaSetia() {
             <div className="flex items-center gap-4">
 
             <div>
-            <Link to={`/dashboardGov/${PageLink}`}><Button className="w-sm md:w-40">{area}</Button></Link>
+            <Link to={`/dashboardPublic/${PageLink}`}><Button className="w-sm md:w-40">{area}</Button></Link>
             </div>
             </div>
             </td>
@@ -218,19 +217,15 @@ export function GovSmartParkingJayaSetia() {
             </td>
 
             <td className={className}>
-            <Link to={`/dashboardGov/${cctvlink}`}><Button className="w-sm md:w-40">{condition}</Button></Link>
+            <Link to={`/dashboardPublic/${cctvlink}`}><Button className="w-sm md:w-40">{condition}</Button></Link>
             </td>
 
             <td className={className}>
-            <Link to={`/dashboardGov/${booklink}`}><Button className="w-sm md:w-40">{bookParking}</Button></Link>
+            <Link to={`/dashboardPublic/${booklink}`}><Button className="w-sm md:w-40">{bookParking}</Button></Link>
             </td>
 
 
 
-
-
-
-           
             
             </tr>
             );
@@ -252,4 +247,4 @@ export function GovSmartParkingJayaSetia() {
   );
 }
 
-export default GovSmartParkingJayaSetia;
+export default PublicSmartParkingJayaSetia;

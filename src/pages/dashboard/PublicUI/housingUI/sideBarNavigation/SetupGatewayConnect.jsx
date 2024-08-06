@@ -10,7 +10,7 @@ import {
   Input,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
-import WeatherKBTransmitted from '../../../../../govdata/MTICData/WeatherForecastData/WeatherForecaseKb/weatherKBTransmitted';
+import RTUTableGatewaydatatransmited from '../../../../../housedata/All-Housing-Table-Data/RTU-Gateway-table-transmitted';
 
 export function SetupGatewayConnect() {
   return (
@@ -191,10 +191,10 @@ export function SetupGatewayConnect() {
           </thead>
           <tbody>
 
-        {WeatherKBTransmitted.map(
+        {RTUTableGatewaydatatransmited.map(
           ({  id, status, Speed, connectionType, transmitteddata}, key) => {
           const className = `py-3 px-5 ${
-          key === WeatherKBTransmitted.length - 1
+          key === RTUTableGatewaydatatransmited.length - 1
           ? ""
           : "border-b border-blue-gray-50"
           }`;
